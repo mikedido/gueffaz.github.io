@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>$ cd /home/</title>
-    <link>http://www.example.com/fr/</link>
+    <link>http://mikedido.github.io/fr/</link>
     <description>Recent content on $ cd /home/</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://www.example.com/fr/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="http://mikedido.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contato</title>
-      <link>http://www.example.com/fr/contact/</link>
+      <link>http://mikedido.github.io/fr/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/fr/contact/</guid>
+      <guid>http://mikedido.github.io/fr/contact/</guid>
       <description>Me siga em @joaoninguem.</description>
     </item>
     
     <item>
       <title>Projetos</title>
-      <link>http://www.example.com/fr/projects/</link>
+      <link>http://mikedido.github.io/fr/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/fr/projects/</guid>
+      <guid>http://mikedido.github.io/fr/projects/</guid>
       <description>Em construção&amp;hellip; Aguarde!</description>
     </item>
     
     <item>
       <title>Sobre Hugo</title>
-      <link>http://www.example.com/fr/about/</link>
+      <link>http://mikedido.github.io/fr/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/fr/about/</guid>
+      <guid>http://mikedido.github.io/fr/about/</guid>
       <description>Em construção&amp;hellip; Aguarde!</description>
     </item>
     

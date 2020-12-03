@@ -3,114 +3,114 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/fr/</loc>
+    <loc>http://mikedido.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/"
+                href="http://mikedido.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/"
+                href="http://mikedido.github.io/fr/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/authors/</loc>
+    <loc>http://mikedido.github.io/fr/authors/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/authors/"
+                href="http://mikedido.github.io/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/authors/"
+                href="http://mikedido.github.io/fr/authors/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/categories/</loc>
+    <loc>http://mikedido.github.io/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/categories/"
+                href="http://mikedido.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/categories/"
+                href="http://mikedido.github.io/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/contact/</loc>
+    <loc>http://mikedido.github.io/fr/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/contact/"
+                href="http://mikedido.github.io/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/contact/"
+                href="http://mikedido.github.io/fr/contact/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/projects/</loc>
+    <loc>http://mikedido.github.io/fr/projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/projects/"
+                href="http://mikedido.github.io/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/projects/"
+                href="http://mikedido.github.io/fr/projects/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/series/</loc>
+    <loc>http://mikedido.github.io/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/series/"
+                href="http://mikedido.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/series/"
+                href="http://mikedido.github.io/fr/series/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/about/</loc>
+    <loc>http://mikedido.github.io/fr/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/about/"
+                href="http://mikedido.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/about/"
+                href="http://mikedido.github.io/fr/about/"
                 />
   </url>
   
   <url>
-    <loc>http://www.example.com/fr/tags/</loc>
+    <loc>http://mikedido.github.io/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/"
+                href="http://mikedido.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://www.example.com/fr/tags/"
+                href="http://mikedido.github.io/fr/tags/"
                 />
   </url>
   
