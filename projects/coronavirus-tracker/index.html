@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Mahdi GUEFFAZ">
+    <meta name="description" content="An app to analysis data about the corona virus/COVID-19 on the world by giving the number of deaths, confirmed and recovered per- son. Also a charts and histogrammes available to evaluate the num- ber of deaths, confirmed and recovered by country.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Coronavirus tracker"/>
+<meta name="twitter:description" content="An app to analysis data about the corona virus/COVID-19 on the world by giving the number of deaths, confirmed and recovered per- son. Also a charts and histogrammes available to evaluate the num- ber of deaths, confirmed and recovered by country."/>
+
+    <meta property="og:title" content="Coronavirus tracker" />
+<meta property="og:description" content="An app to analysis data about the corona virus/COVID-19 on the world by giving the number of deaths, confirmed and recovered per- son. Also a charts and histogrammes available to evaluate the num- ber of deaths, confirmed and recovered by country." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://mikedido.github.io/projects/coronavirus-tracker/" />
+<meta property="article:published_time" content="2020-11-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-15T00:00:00+00:00" />
+
+
+
+
+    <title>
+  Coronavirus tracker · $ cd /home/
+</title>
+
+    
+      <link rel="canonical" href="http://mikedido.github.io/projects/coronavirus-tracker/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/css/fork-awesome.min.css" integrity="sha512-9QjPqX/aCNwEQDyMqqMluNOSsHxTwOJNO3d4m5aUeNbyOPm8RcBA5hCUhvGmKFtSmQYGajqPopGtD60FWiWUwg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.c86383fb6d4c1f21196659450b74100986ea2356bcfc18b583c3534d92a2239f.css" integrity="sha256-yGOD&#43;21MHyEZZllFC3QQCYbqI1a8/Bi1g8NTTZKiI58=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.127a8585f14f079da5d6160b6afb7a50f462765a6a55868b99afea9dd9e72d51.css" integrity="sha256-EnqFhfFPB52l1hYLavt6UPRidlpqVYaLma/qndnnLVE=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/12.0.4/2/twemoji.min.js" integrity="sha512-panBjUGuKarjg0qxHggQULmRf9jB/YVCy238hmzBWUuLeOuwMSuJgJcUv3T+rwXUBZ9zeUvc49ZcCRH+EO0H8g==" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.79.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+    <main class="wrapper">
+      <nav class="navigation" id="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      <span class="logo__mark">&gt;</span>
+      <span class="logo__text">$ cd /home/</span>
+      <span class="logo__cursor"></span>
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://mikedido.github.io/fr/projects/coronavirus-tracker/">Fr</a>
+              </li>
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              <li id="dark-mode-toggle" class="navigation-item">
+                <a >
+                  <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+                  
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Coronavirus tracker</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-11-15T00:00:00Z'>
+                November 15, 2020
+              </time>
+            </span>
+            
+              <span class="reading-time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                23-minute read
+              </span>
+            
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/mahdi-gueffaz/">Mahdi Gueffaz</a></div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="https://img.shields.io/badge/v3.7-Python3-green" alt="python">
+<img src="https://img.shields.io/badge/v1.1-flask-green" alt="flask">
+<img src="https://img.shields.io/badge/v2.10.3-jinja-green" alt="jinja">
+<img src="https://img.shields.io/badge/v1.5-javascript-yellow" alt="javascirpt">
+<img src="https://img.shields.io/badge/v5-d3js-yellow" alt="d3js">
+<img src="https://img.shields.io/badge/v2-spinner-yellow" alt="spinner"></p>
+<h2 id="about">About</h2>
+<p>An app to analysis data about the corona virus / COVID-19  by giving the number of deaths, confirmed, active and recovered person on the world.</p>
+<p>The app give a detailed information for each country. charts and histogrammes are available to evaluate the number of deaths, confirmed and recovered by country.</p>
+<p>The app is available by clicking on the following link : <a href="https://corona-stats-world.herokuapp.com/">https://corona-stats-world.herokuapp.com/</a></p>
+<h2 id="screenshot">Screenshot</h2>
+<h3 id="version-1-november-2020">Version 1 (november 2020)</h3>
+<p><img src="/images/v1/map1.png" alt="Example image">
+<img src="/images/v1/country_info.png" alt="Example image">
+<img src="/images/v1/country_charts.png" alt="Example image"></p>
+<h3 id="version-0-march-2020">Version 0 (march 2020)</h3>
+<p><img src="/images/v0/map.png" alt="Example image">
+<img src="/images/v0/charts.png" alt="Example image">
+<img src="/images/v0/histo.png" alt="Example image"></p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Data</strong>: Shows the most recent data automatically.</li>
+<li><strong>Distribution map</strong> with two levels of details:
+<ul>
+<li><strong>Countries</strong>: When the user mouse over country on the map. Fewer details show the number of deaths, confirmed, recovered and active are shown.</li>
+<li><strong>List</strong> : list of the countries regrouped by deaths, confirmed, active and recovered+.</li>
+</ul>
+</li>
+<li><strong>Country</strong>:
+<ul>
+<li><strong>information</strong> detailed information about the country (population, recovered, confirmed, &hellip;deaths per million, recovered per million,&hellip;case fatality).</li>
+<li><strong>provinces_list</strong> add province list of a country with the detailled information for each province.</li>
+<li><strong>Confirmed chart</strong> for all countries.</li>
+<li><strong>Deaths chart</strong> for all countries.</li>
+<li><strong>Recovered chart</strong> for all country.</li>
+<li><strong>Confirmed Histogramme</strong> the number of confirmed by day and by country</li>
+<li><strong>Deaths Histogramme</strong> the number of deaths by day and by country</li>
+<li><strong>Recovered Histogramme</strong> the number of recovered by day and by country</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-use">How to Use</h2>
+<h4 id="build-from-source-code">Build from source code</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1. Clone/Download the repo.
+2. Install the requiremenet : `make install`
+2. Execute &amp; run! : `make run`
+3. Visit your browser : http://localhost:5000
+4. Enjoy ;)
+</code></pre></div><h4 id="runing-tests">Runing tests</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">make test
+</code></pre></div><h4 id="runing-linter">Runing linter</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">make lint
+</code></pre></div><h2 id="todo">TODO</h2>
+<ul>
+<li><strong>Search</strong> for countries &amp; cities.</li>
+<li><strong>Cities</strong> add détails of the cities.</li>
+<li><strong>Chart</strong> add map by country and their détails by city.</li>
+<li><strong>Share</strong> stats &amp; charts as images.</li>
+<li><strong>Statistics</strong>: Including the number of confirmed, recovered, and deaths, in addition to percents.</li>
+</ul>
+<h2 id="data">Data</h2>
+<p>The data of coronavirus are retrieve from the api of the github project : <a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a></p>
+<p>This API used the data from : jhu - <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a> - Worldwide Data repository operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).</p>
+<h2 id="the-map">The map</h2>
+<p>The used map are the same used on d3dataviz. Visit the website : <a href="https://www.datavis.fr/index.php?page=map-improve">https://www.datavis.fr/index.php?page=map-improve</a></p>
+<h2 id="contribute">Contribute</h2>
+<p>Please feel free to contribute pull requests or create issues for bugs and feature requests.</p>
+<h2 id="license">License</h2>
+<p>The app is available for personal/non-commercial use. It&rsquo;s not allowed to publish, distribute, or use the app in a commercial way.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in Theme</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="/posts/twemoji-support/">Twemoji Support 🤩</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/posts/render-latex-using-katex/">Render LaTeX using KaTeX</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/posts/theme-demo/">Theme Demo</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/projects/ilot/">Ilot</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/posts/creating-a-new-theme/">Creating a New Theme</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+    
+    
+    
+      <h3>See also in Hugo</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="/posts/twemoji-support/">Twemoji Support 🤩</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/posts/render-latex-using-katex/">Render LaTeX using KaTeX</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://github.com/luizdepra/hugo-coder/wiki">Hugo coder wiki</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/posts/theme-demo/">Theme Demo</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/projects/ilot/">Ilot</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Mahdi GUEFFAZ 
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.a174f322143153d519c8f11b22942a76d356dc40eddd4948f983cb2c3b1ba285.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>

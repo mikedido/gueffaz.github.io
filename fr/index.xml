@@ -5,7 +5,44 @@
     <link>http://mikedido.github.io/fr/</link>
     <description>Recent content on $ cd /home/</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://mikedido.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://mikedido.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coronavirus tracker</title>
+      <link>http://mikedido.github.io/fr/projects/coronavirus-tracker/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/projects/coronavirus-tracker/</guid>
+      <description>(comming soon)</description>
+    </item>
+    
+    <item>
+      <title>Dummy</title>
+      <link>http://mikedido.github.io/fr/posts/dummy/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/posts/dummy/</guid>
+      <description>ici un post en fr</description>
+    </item>
+    
+    <item>
+      <title>Ilot</title>
+      <link>http://mikedido.github.io/fr/projects/ilot/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/projects/ilot/</guid>
+      <description>(comming soon)</description>
+    </item>
+    
+    <item>
+      <title>ScaleSem</title>
+      <link>http://mikedido.github.io/fr/projects/scalesem/</link>
+      <pubDate>Fri, 15 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/projects/scalesem/</guid>
+      <description>(comming soon)</description>
+    </item>
+    
     <item>
       <title>Contact</title>
       <link>http://mikedido.github.io/fr/contact/</link>
@@ -13,15 +50,6 @@
       
       <guid>http://mikedido.github.io/fr/contact/</guid>
       <description>N&amp;rsquo;hésitez pas à me contacter sur mahdi.gueffaz [a] gmail.comou suivez-moi sur GitHub, Linkedin, DBLP ou bientôt sur ma chaîne youtube (coming soon)</description>
-    </item>
-    
-    <item>
-      <title>Projets</title>
-      <link>http://mikedido.github.io/fr/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://mikedido.github.io/fr/projects/</guid>
-      <description>Mes projets</description>
     </item>
     
     <item>

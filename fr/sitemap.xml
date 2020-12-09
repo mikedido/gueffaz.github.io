@@ -4,6 +4,7 @@
   
   <url>
     <loc>http://mikedido.github.io/fr/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,6 +19,7 @@
   
   <url>
     <loc>http://mikedido.github.io/fr/authors/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,7 +33,103 @@
   </url>
   
   <url>
+    <loc>http://mikedido.github.io/fr/projects/coronavirus-tracker/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/projects/coronavirus-tracker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/projects/coronavirus-tracker/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/series/hugo/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/series/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/series/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/authors/mahdi-gueffaz/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/authors/mahdi-gueffaz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/authors/mahdi-gueffaz/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/projects/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/series/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/series/theme/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/series/theme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/series/theme/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/categories/blog/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mikedido.github.io/fr/categories/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -41,6 +139,96 @@
                 rel="alternate"
                 hreflang="fr"
                 href="http://mikedido.github.io/fr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/posts/dummy/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/tags/hugo/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/tags/i18n/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/posts/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/tags/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/authors/translation-test/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/projects/ilot/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/projects/ilot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/projects/ilot/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://mikedido.github.io/fr/projects/scalesem/</loc>
+    <lastmod>2013-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://mikedido.github.io/projects/scalesem/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://mikedido.github.io/fr/projects/scalesem/"
                 />
   </url>
   
@@ -59,34 +247,6 @@
   </url>
   
   <url>
-    <loc>http://mikedido.github.io/fr/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://mikedido.github.io/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://mikedido.github.io/fr/projects/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://mikedido.github.io/fr/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://mikedido.github.io/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://mikedido.github.io/fr/series/"
-                />
-  </url>
-  
-  <url>
     <loc>http://mikedido.github.io/fr/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -97,20 +257,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="http://mikedido.github.io/fr/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://mikedido.github.io/fr/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://mikedido.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://mikedido.github.io/fr/tags/"
                 />
   </url>
   

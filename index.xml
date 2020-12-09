@@ -6,7 +6,19 @@
     <description>Recent content on $ cd /home/</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://mikedido.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://mikedido.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coronavirus tracker</title>
+      <link>http://mikedido.github.io/projects/coronavirus-tracker/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/projects/coronavirus-tracker/</guid>
+      <description>About An app to analysis data about the corona virus / COVID-19 by giving the number of deaths, confirmed, active and recovered person on the world.
+The app give a detailed information for each country. charts and histogrammes are available to evaluate the number of deaths, confirmed and recovered by country.
+The app is available by clicking on the following link : https://corona-stats-world.herokuapp.com/
+Screenshot Version 1 (november 2020) Version 0 (march 2020) Features  Data: Shows the most recent data automatically.</description>
+    </item>
+    
     <item>
       <title>Twemoji Support 🤩</title>
       <link>http://mikedido.github.io/posts/twemoji-support/</link>
@@ -41,15 +53,6 @@ This is text with inline math $\sum_{n=1}^{\infty} 2^{-n} =1$ This is text with 
     </item>
     
     <item>
-      <title>Dummy</title>
-      <link>http://mikedido.github.io/posts/dummy/</link>
-      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://mikedido.github.io/posts/dummy/</guid>
-      <description>Nada para ver aqui!</description>
-    </item>
-    
-    <item>
       <title>Theme Demo</title>
       <link>http://mikedido.github.io/posts/theme-demo/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
@@ -63,6 +66,15 @@ Deleted text
 This is text with inline math $\sum_{n=1}^{\infty} 2^{-n} = 1$ and with math blocks:
 $$ \sum_{n=1}^{\infty} 2^{-n} = 1 $$
    Heading Another heading     text text   text text   text text     Block quotes are written like so.</description>
+    </item>
+    
+    <item>
+      <title>Ilot</title>
+      <link>http://mikedido.github.io/projects/ilot/</link>
+      <pubDate>Sat, 15 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/projects/ilot/</guid>
+      <description>About The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.</description>
     </item>
     
     <item>
@@ -109,6 +121,15 @@ Follow the following steps:
     </item>
     
     <item>
+      <title>ScaleSem</title>
+      <link>http://mikedido.github.io/projects/scalesem/</link>
+      <pubDate>Fri, 15 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/projects/scalesem/</guid>
+      <description>About The ScaleSem project consists of checking graph properties seman- tics and allow their interrogation. To do this, we have developed tools for transforming and querying semantic graphs based on the Model checking method. These graphs evolve rapidly and their adaptation to change can re- veal inconsistencies. Driving the application of changes while maintaining the consistency of semantic graphs is a crucial and costly task in terms of time and complexity.</description>
+    </item>
+    
+    <item>
       <title>About Hugo</title>
       <link>http://mikedido.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -138,15 +159,6 @@ Setup Some fun facts about Hugo:
       <guid>http://mikedido.github.io/snippets/first/</guid>
       <description>This content is in snippets/first/index.md
 pwd </description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://mikedido.github.io/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://mikedido.github.io/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!</description>
     </item>
     
     <item>

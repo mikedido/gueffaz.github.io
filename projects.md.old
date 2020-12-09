@@ -1,0 +1,38 @@
++++
+title = "Projects"
+slug = "projects"
+authors = ["John Doe", "Jane Smith"]
++++
+
+1. [Coronaviruse tracker](#coronavirus-tracker)
+2. [ILOT](#ilot)
+3. [ScaleSem](#scalesem)
+
+## Coronavirus tracker
+􏰂 2020 􏰐 Paris,France
+
+An open-source app to analysis data about the corona virus/COVID-19 on the world by giving the number of deaths, confirmed and recovered per- son. Also a charts and histogrammes available to evaluate the num- ber of deaths, confirmed and recovered by country.
+
+Python Flask Javascript Jinja D3js Git/Github Travis CI
+[Github](https://www.github.com/mikedido/coronavirus-stats)
+***
+
+## ILOT
+
+􏰂 2013/2014 􏰐 Paris,France
+
+The ILOT (Innovative Learning Object for Teaching) project is a col- laborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.
+
+Java Jena librairy Javascript TF/IDF NLP
+􏰌 https://ilot.wp.imt.fr/fr/
+***
+
+## ScaleSem
+􏰂 2009/2012 􏰐 Dijon,France
+
+The ScaleSem project consists of checking graph properties seman- tics and allow their interrogation. To do this, we have developed tools for transforming and querying semantic graphs based on the Model checking method.
+These graphs evolve rapidly and their adaptation to change can re- veal inconsistencies. Driving the application of changes while main- taining the consistency of semantic graphs is a crucial and costly task in terms of time and complexity. An automated process is therefore essential. Model checking is a verification technique that explores all the possible states of the system. In this way, we can show that a model of a given system satisfies a given property.
+
+Java Jena librairy Model Checker C/C++
+
+􏰌 tel.archives-ouvertes.fr/tel-00801730/

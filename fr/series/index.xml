@@ -5,6 +5,25 @@
     <link>http://mikedido.github.io/fr/series/</link>
     <description>Recent content in Series on $ cd /home/</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://mikedido.github.io/fr/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://mikedido.github.io/fr/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>http://mikedido.github.io/fr/series/hugo/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/series/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>http://mikedido.github.io/fr/series/theme/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikedido.github.io/fr/series/theme/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
