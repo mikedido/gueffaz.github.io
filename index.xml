@@ -14,7 +14,7 @@
       
       <guid>http://mikedido.github.io/projects/coronavirus-tracker/</guid>
       <description>About An app to analysis data about the corona virus / COVID-19 by giving the number of deaths, confirmed, active and recovered person on the world.
-The app give a detailed information for each country. charts and histogrammes are available to evaluate the number of deaths, confirmed and recovered by country.
+The app give a detailed information for each country. Charts and histogrammes are available to evaluate the number of deaths, confirmed active and recovered by country.
 The app is available by clicking on the following link : https://corona-stats-world.herokuapp.com/
 Screenshot Version 1 (november 2020) Version 0 (march 2020) Features  Data: Shows the most recent data automatically.</description>
     </item>
@@ -74,7 +74,7 @@ $$ \sum_{n=1}^{\infty} 2^{-n} = 1 $$
       <pubDate>Sat, 15 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/projects/ilot/</guid>
-      <description>About The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.</description>
+      <description>Table of contents  Introduction Some paragraph  Sub paragraph   Another paragraph  About The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.</description>
     </item>
     
     <item>

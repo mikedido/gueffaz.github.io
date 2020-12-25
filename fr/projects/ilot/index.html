@@ -157,7 +157,7 @@
             
               <span class="reading-time">
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                42 minutes de lecture
+                15 minutes de lecture
               </span>
             
           </div>
@@ -171,7 +171,150 @@
 
       <div>
         
-        <p>(comming soon)</p>
+        <p><img src="https://img.shields.io/badge/v3.7-Java-green" alt="java">
+<img src="https://img.shields.io/badge/v1.1-Jena-green" alt="jena">
+<img src="https://img.shields.io/badge/v2.10.3-RDF-yellow" alt="RDF">
+<img src="https://img.shields.io/badge/v1.5-OWL-yellow" alt="OWL">
+<img src="https://img.shields.io/badge/v5-SPARQL-yellow" alt="sparql"></p>
+<h1 id="sommaire-">Sommaire :</h1>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#architecture">Architecture</a>
+<ul>
+<li><a href="#le-corpus">2.1. Le corpus</a></li>
+<li><a href="#phase-1">2.2. Phase de peupelement</a>
+<ul>
+<li><a href="#phase-1-1">2.2.1 Annotation</a></li>
+<li><a href="#phase-1-2">2.2.2 Peupelement</a></li>
+</ul>
+</li>
+<li><a href="#phase-2">2.3 Phase d&rsquo;enrichissement </a>
+<ul>
+<li><a href="#phase-2-1">2.3.1 Avec des données générales</a></li>
+<li><a href="#phase-2-2">2.3.2 Avec des données spécéfiques</a></li>
+</ul>
+</li>
+<li><a href="#phase-3">2.4 Phase d&rsquo;exploitation</a></li>
+</ul>
+</li>
+<li><a href="#partenaires">Partenaires</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#liens">Liens</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>Le projet ILOT (<em>Innovative Learning Object for Teaching</em>) est un projet collaboratif qui associe <a href="">Gutenberg technologies</a>, <a href="">LeLivreScolaire</a>, <a href="">Alcatel Lucent</a> et <a href="">Telecom ParisTech</a> pour proposer un entrepôt de ressources pédagogiques permettant l’élaboration collaborative de telles ressources, leur annotation et leur exploitation dans différents modes de consultation.</p>
+<p>L’équipe Multimédia de Telecom ParisTech contribue au projet ILOT principalement sur la représentation de documents multimédia destinés à être exploités dans divers contextes d’utilisation, par divers utilisateurs sur divers terminaux. Le travail porte également sur les metadonnées représentant des informations sémantiques concernant ces documents et sur l’exploitation de cette sémantique.</p>
+<p>Dans ce site, on trouvera des descriptions de démonstrateurs et de résultats de notre travail, des propositions d’outils et de méthodes, des considérations sur l’état de l’art concernant les questions abordées par nos travaux.</p>
+<p>Le projet ILOT a pour objectif le développement d’une plate-forme logicielle pour la création collaborative, l’assemblage, la mise à disposition et l’utilisation partagée de contenus pédagogiques adaptables à l’élève comme au support utilisé (Web, Smartphones, tablettes tactiles, tableaux numériques interactifs, ouvrages papier, Smartphones, cartables numériques…). Cours et cursus de formation seront alors composés d’objets d’apprentissage réutilisables et annotables – les ILOTs – et seront associés à des réseaux sociaux centrés sur les contenus.
+Autrement dit, le consortium ILOT s’est donné pour objectif d’utiliser les technologies numériques au profit du monde éducatif, des professeurs et éditeurs de contenus pédagogiques jusqu’aux apprenants. De fait, la plate-forme développée.</p>
+<ul>
+<li>
+<p>Dotera les enseignants d’outils leur permettant de créer leurs cours en réutilisant, s’ils le souhaitent, des objets pédagogiques réunis au sein d’une place de marché.</p>
+</li>
+<li>
+<p>Adaptera ces contenus pédagogiques aux élèves les utilisant et au média utilisé.</p>
+</li>
+<li>
+<p>Renforcera les échanges entre enseignants et élèves, en leur offrant des réseaux sociaux s’articulant autour des contenus pédagogiques et des possibilités d’annotations et de conversations autour de ces derniers.</p>
+</li>
+<li>
+<p>Donnera à tous les éditeurs de manuels scolaires des outils et un accès à des contenus adaptés pour éditer leurs propres livres.</p>
+</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<ul>
+<li>
+<p><strong>Extraction</strong> : fournit les informations à partir du corpus pour constituer l’ontologie ; dans notre processus, une extraction semi-automatique des textes des fichiers PDF a permis une première structuration en XML ;</p>
+</li>
+<li>
+<p><strong>Analyse</strong> : en partant des résultats de la première étape, cette étape utilise l’analyse morphologique ou lexicale, l’analyse sémantique pour détecter les synonymes, les homonymes et d’autres relations de ce type; de telles techniques nous permettent d’annoter le fichier XML pour en distinguer certaines parties ;</p>
+</li>
+<li>
+<p><strong>Génération</strong> : cette étape porte sur la formalisation d’un modèle, par exemple avec OWL. C’est l’étape la plus importante du processus. Dans notre projet, nous construisons plusieurs ontologies pour les différents programmes scolaires regroupés par matière. Partant d’une ontologie de base, nous la peuplons par extraction d’information du fichier XML. L’ontologie de base est conçue manuellement pour tous les différents programmes scolaires. La conception de l’ontologie de base a été élaboré par une études détaillée des différents programmes scolaires de chaque matière de tout niveau.</p>
+</li>
+<li>
+<p><strong>Validation</strong> : toutes les étapes précédentes peuvent introduire des concepts et des relations erronés, pour cela une phase de validation automatique et/ou humaine est nécessaire. Nous avons procédé à une validation humaine, notamment avec les raisonneurs de l’outil Protégé ;</p>
+</li>
+<li>
+<p><strong>Evolution</strong> : une ontologie ne doit pas être une représentation statique d’un domaine, mais doit évoluer avec lui ; cette phase n’a pas encore été abordée dans notre dispositif</p>
+</li>
+</ul>
+<h4 id="le-corpus--a-idle-corpusa">Le corpus : <a id="le-corpus"></a></h4>
+<p>L’utilisation du programme scolaire dans notre démarche destinée à indexer des ressources éducatives s’est appuyée sur des expériences menées avec des utilisateurs et des résultats de recherche de projets européens dans le domaine de l’éducation, qui
+nous ont confortés dans l’idée d’utiliser des ontologies.</p>
+<p>Notre corpus d’expérimentation est constitué des programmes scolaires de toutes les matières au niveau Collège et Lycée, mis à disposition par le Ministère de l’Education nationale sur le portail eduscol2. Le corpus contient des documents PDF et des documents HTML que nous avons transformés manuellement en fichiers XML. Ces programmes ont été conçus comme la trame de la pédagogie pour les enseignants. Ces programmes, consultés par tous les enseignants, deviennent ainsi un langage commun propre de la communauté.
+Le corpus contient plusieurs matières à enseigner : Histoire-géographie-éducation civique, Arts plastiques, Education musicale, Education physique et sportive, Langues et cultures de l’Antiquité, Langues vivantes, Français, Histoire des Arts,
+Mathématiques, Physique-chimie, Sciences de la vie et de la Terre, Technologie.
+Quantitativement, le corpus est composé de 62 documents en format pdf et en html.
+Dans l’ensemble, les documents comprennent deux grandes parties. La partie introductive contenant les objectifs et la mise en œuvre des programmes et la partie des contenus de l’enseignement.
+Cette dernière partie contient les entités pédagogiques (thème, démarche, capacité, description, etc.) qui seront extraits pour la construction des ontologies des programmes scolaires. Certains programmes comme Histoire, Mathématiques, Sciences de la vie et de la Terre, Technologie ont une représentation semi-structurée sous forme de tables contenant ces informations. Cette mise en forme nous aide à déterminer les relations et/ou définir la hiérarchisation des entités pédagogiques entre elles.</p>
+<h4 id="phase-de-peupelement--a-idphase-1a">Phase de peupelement : <a id="phase-1"></a></h4>
+<p>Nous avons choisi une représentation dans le langage d’ontologie <strong>OWL</strong>. Plusieurs raisons ont guidé ce choix. D’abord une raison pragmatique de cohérence en terme d’outils techniques et conceptuels utilisés par notre équipe. Ensuite, parce que OWL nous a permis d’adjoindre clairement la description de nombreux synonymes aux verbes de Bloom (nous verrons que cela nous permet d’améliorer le rappel dans nos traitements automatisés). Enfin, cette approche, bien intégrée aux technologies du web sémantique, nous parait faciliter de futures évolutions de nos outils, par exemple pour la prise en compte de stratégies pédagogiques (par exemple, en associant un objectif pédagogique à des méthodes connues pour l’atteindre et qui seraient décrites dans cette ontologie ou dans d’autres).</p>
+<p>Notre ontologie de Bloom est composée de 83 classes réparties dans une hiérarchie à partir de 6 classes principales (analyser, appliquer, créer, évaluer, mémoriser, comprendre). A ces classes o   nt été associés les labels des verbes correspondants, en français et en anglais, De plus, une référence aux mots anglais correspondants dans <strong>WordNet</strong> constitue une annotation qui peut aider à l’exploitation de ces verbes.
+L’architecture de notre outil de peuplement d’ontologie est composée de deux parties principales</p>
+<ol>
+<li><strong>Annotation</strong> : <a id="phase-1-1"></a> une étape de lemmatisation est appliquée pour la reconnaissance des mots de manière automatique sous différentes variations. Une autre étape de sélection de mots a été effectuée grâce à la mesure TF.IDF. Elle permet de proposer des ‘topics’ les plus porteurs de connaissances dans un domaine particulier, en mettant en évidence des mots singulièrement importants pour un programme. Enfin, nous utilisons notre ontologie ‘de Bloom’, qui sert à classifier les actions pédagogiques sous forme de verbes à la forme infinitive ; nous l’avons créée d’après les travaux de Bloom. Ces étapes nous permettent d’annoter sémantiquement nos documents sources.</li>
+</ol>
+<p><img src="/images/projects/ilot/annotation_step.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 360px !important;width: 417px !important;" ></p>
+<ol start="2">
+<li><strong>Peuplement</strong> : <a id="phase-1-2"></a> une deuxième étape permettant de peupler l’ontologie de base automatiquement en s’appuyant sur les annotations effectuées sur le corpus. A chaque matière, nous associons une ontologie de base, créée manuellement à l’aide de l’éditeur d’ontologie Protégé après une analyse des concepts généraux utilisés par le programme (thèmes, capacités,…). Nos différentes ontologies de base sont très voisines et nous prévoyons de les unifier.</li>
+</ol>
+<p><img src="/images/projects/ilot/peuplement_step.png" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 260px !important;width: 517px !important;" ></p>
+<h4 id="phase-denrichissement--a-idphase-2a">Phase d&rsquo;enrichissement : <a id="phase-2"></a></h4>
+<p>Pour cette phase d&rsquo;enrichissement des ontologies de base du programme scolaire, nous utilisons des collections de données ouvertes (open data). Nous pouvons distinguer deux types de telles collections : des données générales et des données spécifiques.</p>
+<ol>
+<li>
+<p><strong>Enrichissement à l’aide des <em>Catégories</em> de Wikipédia</strong> : <a id="phase-2-1"></a> La première collection concerne les différents types de données extraits de DBpedia, particulièrement Wikipédia Catégorie, destiné à classer les articles de Wikipédia. Ce type de donnée utilise les vocabulaires [24]. Depuis sa création, le graphe des ‘Wikipédia catégories’, est exploité comme objet de recherche à part entière. Nous pouvons citer les travaux récents comme la constitution d’une ressource sémantique issue du treillis des catégories de Wikipédia [25] et l’usage de catégorie pour la conception d’un système de recommandation inter-domaines [26].
+Dans notre étude de cas, nous utilisons la classification hiérarchique de ‘Wikipédia catégorie’ pour enrichir les ontologies de programme scolaire de base. Par exemple,dans l’ontologie de l’Histoire des arts, une des classes primaires est la classe «
+Domaine artistique » contenant les informations concernant les six domaines artistiques : Arts de l’espace, Arts du langage, Arts du quotidien, Arts du son et Arts du spectacle vivant. Le programme officiel propose des listes d’exemples concrets pour chaque domaine. Les exemples des Arts de l&rsquo;espace sont architecture, urbanisme, arts des jardins, paysages aménagé. Dans l’ontologie Histoire des Arts de base, ces derniers deviennent des concepts faisant partie des sous-classes de la classe
+«Arts de l’espace».</p>
+</li>
+<li>
+<p><strong>Enrichissement avec des données spécifiques</strong> : <a id="phase-2-2"></a> Le deuxième type de données que nous pouvons exploiter pour la phase
+d’enrichissement concerne les données ouvertes mises à disposition par les
+institutions publiques. Nous avons identifiés trois jeux de données ayant à voir avec
+nos ontologies de programmes scolaires sur la plateforme data.gouv.fr. Nous
+analysons les possibilités de connexion entre ces données et les concepts de nos
+ontologies. Il s’agit de « Histoire des arts-Notices textes » du Ministère de la Culture
+et de la Communication, d’une liste de 156 dossiers pédagogiques produits par le
+Centre national d&rsquo;art et de culture Georges Pompidou et enfin de la collection des
+données sur la plateforme data.bnf.fr. Ces données pourront être exploitées pour
+l’enrichissement des ontologies du programme scolaire telles qu’Histoire des Arts,
+Histoire et Français.</p>
+</li>
+</ol>
+<h3 id="phase-dexploitation--a-idphase-3a">Phase d&rsquo;exploitation : <a id="phase-3"></a></h3>
+<p>C’est la dernière phase de notre méthode qui servira d’interface entre l’enseignant et les programmes scolaires. Notre formalisation est actuellement constituée de plusieurs ontologies de chaque matière. Nous comptons rapidement créer une ontologie intégrant l’ensemble, ce qui facilitera l’établissement de liens entre programmes. Nous avons déjà créé des interfaces qui exploitent nos ontologies pour présenter les programmes en mettant en évidence les capacités à acquérir et les liens avec des ressources tirées de DBPedia. La perspective est de rendre d’autres ressources externes exploitables pour un enrichissement tant du travail du professeur en phase de préparation de cours que du parcours des cours par les élèves.</p>
+<h2 id="partenaires">Partenaires</h2>
+<p>La notion d’ILOT constitue le fil rouge du projet : l’ILOT, <strong>atome de la pédagogie</strong>, est un élément de base (élément de cours, exercice adaptatif ou non, illustration et légende associée, enregistrement vidéo ou audio d’un cours, etc.), susceptible d’être associé à d’autres pour former des assemblages plus ou moins complexes (sessions de cours, TD, cursus de formation, manuels scolaires, cahiers d’exercices, etc.). L’ILOT est auto-adaptable, annotable et a un objectif pédagogique.</p>
+<p>L’activité du département TSI de Telecom ParisTech dans le projet ILOT porte plus spécifiquement sur les aspects liés aux technologies du multimédia et du Web, en particulier en matière d’adaptation de documents multimédia à leur contexte et d’exploitation des technologies du web sémantique pour la représentation et l’exploitation de ressources pédagogiques.</p>
+<p>En deux mots, l’activité des autres partenaires porte sur:</p>
+<ul>
+<li>
+<p>pour Gutemberg Technology, sur la conception d’ensemble et la réalisation de la plateforme ILOT,</p>
+</li>
+<li>
+<p>pour Alcatel Lucent, sur un ensemble d’aspects liés à l’exploitation des informations produites par la communauté des utilisateurs de la plateforme ILOT: annotations, tweets, commentaires…</p>
+</li>
+<li>
+<p>pour LeLivreScolaire, sur l’apport de contenus pédagogiques pour l’enseignement secondaire en France et l’expertise en matière de réalisation collaborative de contenus pédagogiques.</p>
+</li>
+</ul>
+<p><img src="/images/projects/ilot/logo_trois_partenaires.png" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 100px !important;width: 617px !important;" ></p>
+<h2 id="publications">Publications</h2>
+<ul>
+<li>
+<p>Mahdi Gueffaz, Jirasri Deslis and Jean-Claude Moissinac, Curriculum data enrichment with ontologies. WIMS 2014, 4th International Conference on Web Intelligence, Mining and Semantics, June 2-4, 2014, Thessaloniki, Greece. <a href="https://dl.acm.org/doi/10.1145/2611040.2611070">ici</a></p>
+</li>
+<li>
+<p>Jean-Claude Moissinac, Mahdi Gueffaz, Jirasri Deslis, Création d’une ontologie de domaine: les programmes scolaires français. Conférence TOTh 2014 (Terminologie &amp; Ontologie : Théories et applications), 12-13 juin 2014, Chambéry, France. <a href="https://fr.slideshare.net/IlotProject/toth-ontologies-des-programmes-scolaires-franais-v2revujdfinal">ici</a></p>
+</li>
+<li>
+<p>Mahdi Gueffaz, Jirasri Deslis, Jean-Claude Moissinac, Peuplement automatisé d’ontologies par analyse des programmes scolaires. RISE 2014, 6ème Atelier Recherche d’Information SEmantique, 18 mars 2014, Nancy, France. <a href="http://biblio.telecom-paristech.fr/cgi-bin/download.cgi?id=14500">ici</a></p>
+</li>
+</ul>
+<h2 id="liens">Liens</h2>
+<p>Pour plus d&rsquo;information, veuillez visiter le site du projet ILOT sur le lien suivant <a href="https://ilot.wp.imt.fr/">ici</a></p>
 
       </div>
 

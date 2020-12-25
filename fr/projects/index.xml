@@ -13,7 +13,10 @@
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/fr/projects/coronavirus-tracker/</guid>
-      <description>(comming soon)</description>
+      <description> A propos Une application pour analyser les données sur le virus du corona/COVID-19 en donnant le nombre de décès, personne confirmée, active rétablie dans le monde.
+L&amp;rsquo;application fournit des informations détaillées pour chaque pays. Des graphiques et des histogrammes sont disponibles pour évaluer le nombre de décès, confirmés active et guérisant par pays.
+L&amp;rsquo;application est disponible en cliquant sur le lien suivant: https://corona-stats-world.herokuapp.com/
+Capture d&amp;rsquo;écran Version 1 (november 2020) Version 0 (march 2020) </description>
     </item>
     
     <item>
@@ -22,7 +25,7 @@
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/fr/projects/ilot/</guid>
-      <description>(comming soon)</description>
+      <description>Sommaire :  Introduction Architecture  2.1. Le corpus 2.2. Phase de peupelement  2.2.1 Annotation 2.2.2 Peupelement   2.3 Phase d&amp;rsquo;enrichissement   2.3.1 Avec des données générales 2.3.2 Avec des données spécéfiques   2.4 Phase d&amp;rsquo;exploitation   Partenaires Publications Liens  Introduction Le projet ILOT (Innovative Learning Object for Teaching) est un projet collaboratif qui associe Gutenberg technologies, LeLivreScolaire, Alcatel Lucent et Telecom ParisTech pour proposer un entrepôt de ressources pédagogiques permettant l’élaboration collaborative de telles ressources, leur annotation et leur exploitation dans différents modes de consultation.</description>
     </item>
     
     <item>
@@ -31,7 +34,7 @@
       <pubDate>Fri, 15 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/fr/projects/scalesem/</guid>
-      <description>(comming soon)</description>
+      <description>Sommaire :  Introduction Architecture  2.1. Le corpus 2.2. Phase de peupelement  2.2.1 Annotation 2.2.2 Peupelement   2.3 Phase d&amp;rsquo;enrichissement   2.3.1 Avec des données générales 2.3.2 Avec des données spécéfiques   2.4 Phase d&amp;rsquo;exploitation   Partenaires Publications Liens  Introduction Publications   Mahdi Gueffaz, Jirasri Deslis and Jean-Claude Moissinac, Curriculum data enrichment with ontologies. WIMS 2014, 4th International Conference on Web Intelligence, Mining and Semantics, June 2-4, 2014, Thessaloniki, Greece.</description>
     </item>
     
   </channel>
