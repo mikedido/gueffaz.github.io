@@ -13,10 +13,7 @@
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/projects/coronavirus-tracker/</guid>
-      <description>About An app to analysis data about the corona virus / COVID-19 by giving the number of deaths, confirmed, active and recovered person on the world.
-The app give a detailed information for each country. Charts and histogrammes are available to evaluate the number of deaths, confirmed active and recovered by country.
-The app is available by clicking on the following link : https://corona-stats-world.herokuapp.com/
-Screenshot Version 1 (november 2020) Version 0 (march 2020) Features  Data: Shows the most recent data automatically.</description>
+      <description>About During the first lockdown hearing about COVID-19 all day long prompted me to develop a small app to visualize the evolution of the pandemic around the world. An application to analyze data on the coronavirus / COVID-19 virus by giving the number of deaths, confirmed, active person recovered worldwide. The app provides detailed information in each country. Charts and histograms are available to assess the number of deaths, confirmed active and recovering by country.</description>
     </item>
     
     <item>
