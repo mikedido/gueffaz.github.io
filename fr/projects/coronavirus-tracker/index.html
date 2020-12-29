@@ -180,9 +180,16 @@
 <img src="https://img.shields.io/badge/v5-d3js-yellow" alt="d3js">
 <img src="https://img.shields.io/badge/v2-spinner-yellow" alt="spinner"></p>
 <h2 id="a-propos">A propos</h2>
-<p>Une application pour analyser les données sur le virus du corona/COVID-19 en donnant le nombre de décès, personne confirmée, active rétablie dans le monde.</p>
-<p>L&rsquo;application fournit des informations détaillées pour chaque pays. Des graphiques et des histogrammes sont disponibles pour évaluer le nombre de décès, confirmés active et guérisant par pays.</p>
-<p>L&rsquo;application est disponible en cliquant sur le lien suivant: <a href="https://corona-stats-world.herokuapp.com/">https://corona-stats-world.herokuapp.com/</a></p>
+<p>Pendant le premier confinement entendre parler de COVID-19 toute la journée m’a poussé à développer une petite application de visualisation de l’évolution de la pandémie à travers le monde. Une application pour analyser les données sur le virus du coronavirus/COVID-19 en donnant le nombre de décès, personne confirmée, active rétablie dans le monde. L’application fournit des informations détaillées dans chaque pays. Des graphiques et des histogrammes sont disponibles pour évaluer le nombre de décès, confirmés active et guérissant par pays.</p>
+<p>L&rsquo;application est disponible en cliquant sur le lien suivant: <a href="https://corona-stats-world.herokuapp.com/">ici</a></p>
+<h2 id="développement">Développement</h2>
+<h4 id="technologies">Technologies</h4>
+<p>Le langage <a href="https://www.python.org/">Python</a> a été sélectioné avec le framework <a href="https://flask.palletsprojects.co">Flask</a> pour le développement de cette application. Le langage Javascript avec la librairie <a href="https://d3js.org/">D3JS</a> pour la visualaisation des graphiques d&rsquo;évolution de la pandemie.</p>
+<h4 id="données">Données</h4>
+<p>Les données du coronavirus sont récupérées depuis l&rsquo;API du projet github : <a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a></p>
+<p>Cette API utilise les données de l&rsquo;Université de Johns-Hopkins (Université privée à Baltimore, Maryland) : jhu - <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a> - Dépôt de données mondial exploité par le Centre de science et d&rsquo;ingénierie des systèmes de l&rsquo;Université Johns Hopkins (JHU CSSE).</p>
+<h4 id="la-carte">La carte</h4>
+<p>La carte utilisée est la même que celle utilisée sur d3dataviz. Visitez le site Web : <a href="https://www.datavis.fr/index.php?page=map-improve">https://www.datavis.fr/index.php?page=map-improve</a></p>
 <h2 id="capture-décran">Capture d&rsquo;écran</h2>
 <h3 id="version-1-november-2020">Version 1 (november 2020)</h3>
 <p><img src="/images/projects/corona-tracker/v1/map1.png" alt="Example image">
@@ -192,6 +199,51 @@
 <p><img src="/images/projects/corona-tracker/v0/map.png" alt="Example image">
 <img src="/images/projects/corona-tracker/v0/charts.png" alt="Example image">
 <img src="/images/projects/corona-tracker/v0/histo.png" alt="Example image"></p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Data</strong>: affiche automatiquement les données les plus récentes.</li>
+<li><strong>Carte des pays</strong> avec deux niveaux de détails:
+<ul>
+<li><strong>Countries</strong>: Lorsque l&rsquo;utilisateur passe la souris sur le pays sur la carte. Moins de détails montrent que le nombre de décès, confirmés, guéris et actifs sont affichés.</li>
+<li><strong>List</strong>: liste des pays regroupés par décès, confirmés, actifs et guéris +.</li>
+</ul>
+</li>
+<li><strong>Pays</strong>:
+<ul>
+<li><strong>informations</strong> des informations détaillées sur le pays (population, rétablie, confirmée, &hellip; décès par million, récupéré par million, &hellip; cas de mortalité).</li>
+<li><strong>provinces_list</strong> ajouter la liste des provinces d&rsquo;un pays avec les informations détaillées pour chaque province.</li>
+<li><strong>Confirmed chart</strong> le nombre de confirmés.</li>
+<li><strong>Deaths chart</strong> le nombre de décès.</li>
+<li><strong>Recovered chart</strong> le nombre de récupérés.</li>
+<li><strong>Confirmed Histogramme</strong> le nombre de confirmés jour par jour</li>
+<li><strong>Deaths Histogramme</strong> le nombre de décès par jour et</li>
+<li><strong>Recovered Histogramme</strong> le nombre de récupérés jour par jour</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-use">How to Use</h2>
+<h4 id="build-depuis-le-code-source">Build depuis le code source</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1. Clone/Download the repo.
+2. Install the requiremenet : `make install`
+2. Execute &amp; run! : `make run`
+3. Visit your browser : http://localhost:5000
+4. Enjoy ;)
+</code></pre></div><h4 id="runing-tests">Runing tests</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">make test
+</code></pre></div><h4 id="runing-linter">Runing linter</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">make lint
+</code></pre></div><h2 id="todo">TODO</h2>
+<ul>
+<li><strong>Search</strong> for countries &amp; cities.</li>
+<li><strong>Cities</strong> add détails of the cities.</li>
+<li><strong>Chart</strong> add map by country and their détails by city.</li>
+<li><strong>Share</strong> stats &amp; charts as images.</li>
+<li><strong>Statistics</strong>: Including the number of confirmed, recovered, and deaths, in addition to percents.</li>
+</ul>
+<h2 id="contribution">Contribution</h2>
+<p>N&rsquo;hésitez pas à contribuer à des &ldquo;pull requests&rdquo; ou à créer des problèmes pour les bogues et les demandes de fonctionnalités.</p>
+<h2 id="licence">Licence</h2>
+<p>L&rsquo;application est disponible pour un usage personnel / non commercial. Il est interdit de publier, distribuer ou utiliser l&rsquo;application de manière commerciale.</p>
 
       </div>
 
