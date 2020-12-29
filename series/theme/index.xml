@@ -84,7 +84,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Fri, 15 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/projects/scalesem/</guid>
-      <description>About The ScaleSem project consists of checking graph properties seman- tics and allow their interrogation. To do this, we have developed tools for transforming and querying semantic graphs based on the Model checking method. These graphs evolve rapidly and their adaptation to change can re- veal inconsistencies. Driving the application of changes while maintaining the consistency of semantic graphs is a crucial and costly task in terms of time and complexity.</description>
+      <description>About The increasing development of networks and especially the Internet has greatly expanded the gap between heterogeneous information systems. In a review of studies of interoperability of heterogeneous information systems, we find that all the work in this area tends to be in solving the problems of semantic heterogeneity. The W3C (World Wide Web Consortium) standards proposed to represent the semantic ontology. Ontology is becoming an indispensable support for interoperability of information systems, and in particular the semantics.</description>
     </item>
     
   </channel>

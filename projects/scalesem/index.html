@@ -171,8 +171,39 @@
 <img src="https://img.shields.io/badge/v2.10.3-C-yellow" alt="C">
 <img src="https://img.shields.io/badge/v1.5-C++-yellow" alt="C++"></p>
 <h2 id="about">About</h2>
-<p>The ScaleSem project consists of checking graph properties seman- tics and allow their interrogation. To do this, we have developed tools for transforming and querying semantic graphs based on the Model checking method.
-These graphs evolve rapidly and their adaptation to change can re- veal inconsistencies. Driving the application of changes while maintaining the consistency of semantic graphs is a crucial and costly task in terms of time and complexity. An automated process is therefore essential. Model checking is a verification technique that explores all the possible states of the system. In this way, we can show that a model of a given system satisfies a given property.</p>
+<p>The increasing development of networks and especially the Internet has greatly expanded the
+gap between heterogeneous information systems. In a review of studies of interoperability of
+heterogeneous information systems, we find that all the work in this area tends to be in solving the
+problems of semantic heterogeneity. The W3C (World Wide Web Consortium) standards proposed to
+represent the semantic ontology. Ontology is becoming an indispensable support for interoperability
+of information systems, and in particular the semantics. The structure of the ontology is a
+combination of concepts, properties and relations. This combination is also called a semantic graph.
+Several languages have been developed in the context of the Semantic Web. Most of these
+languages use syntax XML (eXtensible Meta Language). The OWL (Ontology Web Language) and RDF
+(Resource Description Framework) are the most important languages of the Semantic Web, and are
+based on XML.</p>
+<p>RDF is the first W3C standard for enriching resources on the Web with detailed descriptions,
+and increases the facility of automatic processing of Web resources. Descriptions may be
+characteristics of resources, such as the author or the content of a website. These descriptions are
+metadata. Enriching the Web with metadata allows the development of the so-called Semantic Web.
+RDF is used to represent semantic graphs corresponding to a specific knowledge modeling. RDF files
+are typically stored in a relational database and manipulated using SQL, or derived languages such as
+SPARQL. This solution is well suited for small RDF graphs, but is unfortunately not well suited for
+large RDF graphs. These graphs are rapidly evolving, and adapting them to change may reveal
+inconsistencies. Driving the implementation of changes while maintaining the consistency of a
+semantic graph is a crucial task, and costly in terms of time and complexity. An automated process is
+essential. For these large RDF graphs, we propose a new way using formal verification entitled
+&ldquo;Model checking.&rdquo;</p>
+<p>Model checking is a verification technique that explores all possible states of the system. In
+this way, we can show that a model of a given system satisfies a given property. This thesis provides
+a new method for checking and querying semantic graphs. We propose an approach called ScaleSem
+which transforms semantic graphs into graphs understood by the model checker (The verification
+Tool of the model checking method). It is necessary to have software tools to perform the translation
+of a graph described in a certain formalism into the same graph (or adaptation) described in another
+formalism.</p>
+<p>The general idea of the ScaleSem approach is to check properties and to query the semantic
+graphs. To this end, we propose tools for processing and querying semantic graph-based Model
+checking in this thesis.</p>
 
       </div>
 
