@@ -155,6 +155,11 @@
               </time>
             </span>
             
+              <span class="reading-time">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                20-minute read
+              </span>
+            
           </div>
           <div class="authors">
     <i class="fa fa-user" aria-hidden="true"></i>
@@ -166,44 +171,210 @@
 
       <div>
         
-        <p><img src="https://img.shields.io/badge/v3.7-Java-green" alt="Java">
-<img src="https://img.shields.io/badge/v1.1-Jena-green" alt="Jena">
-<img src="https://img.shields.io/badge/v2.10.3-C-yellow" alt="C">
-<img src="https://img.shields.io/badge/v1.5-C++-yellow" alt="C++"></p>
-<h2 id="about">About</h2>
-<p>The increasing development of networks and especially the Internet has greatly expanded the
-gap between heterogeneous information systems. In a review of studies of interoperability of
-heterogeneous information systems, we find that all the work in this area tends to be in solving the
-problems of semantic heterogeneity. The W3C (World Wide Web Consortium) standards proposed to
-represent the semantic ontology. Ontology is becoming an indispensable support for interoperability
-of information systems, and in particular the semantics. The structure of the ontology is a
-combination of concepts, properties and relations. This combination is also called a semantic graph.
-Several languages have been developed in the context of the Semantic Web. Most of these
-languages use syntax XML (eXtensible Meta Language). The OWL (Ontology Web Language) and RDF
-(Resource Description Framework) are the most important languages of the Semantic Web, and are
-based on XML.</p>
-<p>RDF is the first W3C standard for enriching resources on the Web with detailed descriptions,
-and increases the facility of automatic processing of Web resources. Descriptions may be
-characteristics of resources, such as the author or the content of a website. These descriptions are
-metadata. Enriching the Web with metadata allows the development of the so-called Semantic Web.
-RDF is used to represent semantic graphs corresponding to a specific knowledge modeling. RDF files
-are typically stored in a relational database and manipulated using SQL, or derived languages such as
-SPARQL. This solution is well suited for small RDF graphs, but is unfortunately not well suited for
-large RDF graphs. These graphs are rapidly evolving, and adapting them to change may reveal
-inconsistencies. Driving the implementation of changes while maintaining the consistency of a
-semantic graph is a crucial task, and costly in terms of time and complexity. An automated process is
-essential. For these large RDF graphs, we propose a new way using formal verification entitled
-&ldquo;Model checking.&rdquo;</p>
-<p>Model checking is a verification technique that explores all possible states of the system. In
-this way, we can show that a model of a given system satisfies a given property. This thesis provides
-a new method for checking and querying semantic graphs. We propose an approach called ScaleSem
-which transforms semantic graphs into graphs understood by the model checker (The verification
-Tool of the model checking method). It is necessary to have software tools to perform the translation
-of a graph described in a certain formalism into the same graph (or adaptation) described in another
-formalism.</p>
-<p>The general idea of the ScaleSem approach is to check properties and to query the semantic
-graphs. To this end, we propose tools for processing and querying semantic graph-based Model
-checking in this thesis.</p>
+        <p><img src="https://img.shields.io/badge/v1.6-Java-green" alt="Java">
+<img src="https://img.shields.io/badge/v2.4-Jena-green" alt="Jena">
+<img src="https://img.shields.io/badge/v1.1-RDF-green" alt="RDF">
+<img src="https://img.shields.io/badge/v2.0-OWL-yellow" alt="OWL">
+<img src="https://img.shields.io/badge/v1.1-SPARQL-yellow" alt="SPARQL">
+<img src="https://img.shields.io/badge/v2.4.3-NuSMV-yellow" alt="NuSMV">
+<img src="https://img.shields.io/badge/v4.0-SPIN-yellow" alt="SPIN">
+<img src="https://img.shields.io/badge/LTL-yellow" alt="LTL">
+<img src="https://img.shields.io/badge/CTL-yellow" alt="CTL">
+<img src="https://img.shields.io/badge/v3.0-C++-yellow" alt="C++"></p>
+<h1 id="table-of-contents">Table of contents</h1>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#semantic-graphs-qualification">Semantic graphs qualification</a>
+<ul>
+<li><a href="#section-2-1">2.1. The processing steps</a>
+<ul>
+<li><a href="#section-2-1-1">2.1.1 The graph exploration</a></li>
+<li><a href="#section-2-1-2">2.1.2 Determination of a root</a></li>
+<li><a href="#section-2-1-3">2.1.3 Model generation</a></li>
+</ul>
+</li>
+<li><a href="#section-2-2">2.2. The checking process</a></li>
+</ul>
+</li>
+<li><a href="#querying-semantic-graphs">Querying semantic graphs</a></li>
+<li><a href="#the-clock-methodology">The CLOCK methodology</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#thanks">Thanks</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>The increasing development of networks and especially the Internet has greatly expanded the gap between heterogeneous information systems. In a review of studies of interoperability of heterogeneous information systems, we find that all the work in this area tends to be in solving the problems of semantic heterogeneity. The W3C (World Wide Web Consortium) standards proposed to represent the semantic ontology. Ontology is becoming an indispensable support for interoperability of information systems, and in particular the semantics. The structure of the ontology is a combination of concepts, properties and relations. This combination is also called a semantic graph. Several languages have been developed in the context of the Semantic Web. Most of these languages use syntax XML (eXtensible Meta Language). The OWL (Ontology Web Language) and RDF
+(Resource Description Framework) are the most important languages of the Semantic Web, and are based on XML.</p>
+<p>RDF is the first W3C standard for enriching resources on the Web with detailed descriptions, and increases the facility of automatic processing of Web resources. Descriptions may be characteristics of resources, such as the author or the content of a website. These descriptions are metadata. Enriching the Web with metadata allows the development of the so-called Semantic Web. RDF is used to represent semantic graphs corresponding to a specific knowledge modeling. RDF files are typically stored in a relational database and manipulated using SQL, or derived languages such as SPARQL. This solution is well suited for small RDF graphs, but is unfortunately not well suited for large RDF graphs. These graphs are rapidly evolving, and adapting them to change may reveal inconsistencies. Driving the implementation of changes while maintaining the consistency of a semantic graph is a crucial task, and costly in terms of time and complexity. An automated process is essential. For these large RDF graphs, we propose a new way using formal verification entitled &ldquo;Model checking.&rdquo;</p>
+<p>Model checking is a verification technique that explores all possible states of the system. In this way, we can show that a model of a given system satisfies a given property. This thesis provides a new method for checking and querying semantic graphs. We propose an approach called ScaleSem which transforms semantic graphs into graphs understood by the model checker (The verification Tool of the model checking method). It is necessary to have software tools to perform the translation of a graph described in a certain formalism into the same graph (or adaptation) described in another formalism.</p>
+<p>The general idea of the ScaleSem approach is to check properties and to query the semantic graphs. To this end, we propose tools for processing and querying semantic graph-based Model checking in this thesis.</p>
+<h2 id="semantic-graphs-qualification">Semantic graphs qualification</h2>
+<p>After presenting several model checkers, we chose the SPIN and NuSMV model checkers which use non-timed automata, that is to say that the notion of time is not taken into account in the edges of our models. This untimed model is appropriate in our approach, since a semantic graph does not take into account the time (or does not need a time variable) to move from one state of the graph to another. The SPIN and NuSMV model checkers are the most widely used in the field of qualitative verification.</p>
+<p>Our approach which consists in transforming semantic graphs into models in order to be verified by the model checker. This transformation and verification approach is called “ScaleSem”. For this, we have developed two tools called <em>RDF2SPIN</em> and <em>RDF2NuSMV</em> (these two tools have been deposited with the Agency for the Protection of Programs <a href="https://www.app.asso.fr/nos-solutions/deposer">APP</a>), which transform the semantic graphs respectively into the PROMELA language and into the SMV language.</p>
+<h3 id="the-processing-steps-a-idsection-2-1a">The processing steps <a id="section-2-1"></a></h3>
+<p>The transformation of a semantic graph into a model is the first phase of the ScaleSem approach. This phase consists of representing the semantic graph in another form, in order to allow the Model Checher to verify it. The different stages of this transformation are:</p>
+<h6 id="the-graph-exploration--a-idsection-2-1-1a">The graph exploration : <a id="section-2-1-1"></a></h6>
+<p>In order to exploit semantic graphs, we need to determine if they have a root vertex. Otherwise, we must create a new root, pointing to each of the previous root vertices, taking care to keep the size of the resulting graph as small as possible.</p>
+<p><img src="/images/projects/scalesem/algo_dfs.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 360px !important;width: 617px !important;" ></p>
+<p>Let us take a semantic graph represented as a couple <em>(V, E)</em>, where <em>V</em> is the set of vertices and <em>E</em> included in <em>V x V</em> the set of edges. For a vertex <em>x</em>, we notice <em><strong>E(x) = {y ∈ V | (x,y) ∈ E}</strong></em> all of its vertices successor and we assume that these vertices are ordered from <em><strong>E(x)<sub>0</sub></strong></em> until <em><strong>E(x)<sub>|E(x)|-1</sub></strong></em>. This corresponds to the classic data structure for representing graphs in memory, consisting of an array indexed by the vertices and containing in each entry the list of successor vertices of the corresponding vertex. There are several algorithms to browse large graphs. Among them, Depth-First Search (DFS) and Breadth First Search (BFS) are the most well-known. The basic exploration algorithm we use is the Depth-First Search (DFS) algorithm, shown below to explore the graph (see algorithm below), knowing that the algorithm width first also works in this context. We have considered here an iterative variant of DFS, using an explicit stack, rather than the recursive variant. This is necessary in practice to avoid overflowing the system call stack when the algorithm is invoked to explore large graphs.</p>
+<h6 id="determination-of-a-root--a-idsection-2-1-2a">Determination of a root : <a id="section-2-1-2"></a></h6>
+<p>If the semantic graph does not have a root vertex, we have to create a new one as a successor having all the vertices of the graph, but that would increase the number of edges. We are therefore trying to perform this operation by adding as few edges as possible. A vertex of a directed graph is a partial root if it cannot be reached from any other vertex in the graph. If the graph contains only one partial root, all the other vertices of the graph can be reached by the root, otherwise there would be other partial roots in the graph. If the graph has multiple partial roots, the cheapest way to provide a root is to create a new one with all the roots as a partial successor: this will add a minimum number of edges to the graph.</p>
+<p><img src="/images/projects/scalesem/algo_root.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>In the algorithm above, we calculate the set of partial roots in two phases, each consisting of a successive exploration of the graph. The first phase identifies a set of candidate partial roots, and the second refines this set in order to determine the partial roots of the graph.</p>
+<p>The first phase explores the graph until it is fully explored, and inserts into root_list all vertices without a predecessor. If root_list contains only one vertex then it is the (global) root of the graph since all the other vertices are accessible from it and there is no need to go to the second phase. Otherwise, any vertex contained in root_list could also be a partial root: the role of the second phase is to determine which of these candidate partial roots is indeed the global root of the graph. The second phase performs a new wave of successive explorations of the DFS algorithm of the partial roots contained in root_list in the reverse order in which they were inserted in the list. If a root in root_list can be visited by a partial root of the list, it is removed from the list because it is not a partial root. At the end of this phase, all partial roots present in root_list are partial roots. This is because each vertex is inaccessible from one of the partial root candidates in root_list. A root is created, having as a successor all the partial roots of root_list, thus ensuring that all vertices of the graph are accessible from the new root. Therefore, such a vertex is inaccessible from other nodes of the graph.</p>
+<p>The algorithm for determining a root has a linear complexity in the size of the graph (number of vertices and edges), since each phase visits each state and traverses each stop of the graph only once. Since the graph must be traversed entirely, in order to determine whether it has a root or not.</p>
+<h6 id="model-generation--a-idsection-2-1-3a">Model generation : <a id="section-2-1-3"></a></h6>
+<p>The third and final step is divided into three sub-steps. The first and second generate two tables: a triplet table and another table which will depend on the RDF2SPIN or RDF2NuSMV tool used. The last sub-step will produce the semantic graph model written in the input language of the model checker.</p>
+<ul>
+<li>
+<p><strong>Table of triples</strong> - By browsing the RDF graph using graph browsing algorithms (depth or width browsing), we create a table made up of resources, properties and values. In our semantic graph, the resource is a vertex, the property represents an edge, and the value is the successor vertex corresponding to the vertex edge. The semantic graph triplet table is useful for the next step.</p>
+</li>
+<li>
+<p>In this second sub-step, RDF2SPIN generates a table of resources and values, while RDF2NuSMV generates a table of correspondences.</p>
+<ul>
+<li><strong>Resources and values table</strong> – While browsing the triplet table, seen in the previous step, we assign each resource and each value a unique function. These functions are of type proctype. We combine all of these functions into a table called the resource and value table.</li>
+<li><strong>Correspondence table</strong> – in this step, we assign for each resource its following messages (the predicates) and its following states (values).</li>
+</ul>
+</li>
+<li>
+<p><strong>The graph model</strong> - In this last sub-step, we will write the model corresponding to the semantic graph that we want to verify. The model will be written in PROMELA language if we use the RDF2SPIN transformation tool and in SMV language avec l’outil RDF2NuSMV.</p>
+</li>
+</ul>
+<h3 id="the-checking-process-a-idsection-2-2a">The checking process <a id="section-2-2"></a></h3>
+<p>The second phase of our approach is provided by the model checker. After having transformed the semantic graph into a model understandable by the model checker, we can write the properties to be checked in temporal logic. We pass to the model checker the model of the semantic graph and the properties to be checked. The model checker will check the properties one by one and return true if the property is checked, or false with a counterexample otherwise.</p>
+<p>This qualifaction phase prompted us to develop two tools for transforming semantic graphs into models that can be interpreted by the Model Checker tools. These two tools have been the subject of an APP filing. Why two tools? two types of time logic CTL and LTL. The CTL is interpreted by NuSMV while the LTL by SPIN.</p>
+<p>The <strong>RDF2NuSMV</strong> tool which allows the transformation of semantic graphs to a graph model in SMV language, taking into account all the transformation steps described above. This tool was developed in C++ language. The <strong>RDF2SPIN</strong> tool transforms semantic graphs into the PROMELA language. This tool was developed with the C ++ language, under the Linux environment. RDF2SPIN analyzes the semantic graph before converting it into a SPIN model (PROMELA language), in order to ensure that there are no errors in the semantic graph.</p>
+<h2 id="querying-semantic-graphs">Querying semantic graphs</h2>
+<p>In the field of the Semantic Web, several approaches have been proposed for querying graphs, most of them having led to languages ​​standardized by the W3C, such as XPath, XQuery and SPARQL. Various extensions of SPARQL have been proposed in order to increase its expressiveness. Several RDF data query languages ​​have been proposed and implemented. A study of RDF query languages, conducted by W3C, identified more than 20 languages ​​under development or in place.
+For some, they are in line with traditional database query languages ​​(such as SQL (Structured Query Language) or OQL (Object Query Language)). For the others, they are based on logical languages ​​and rules.</p>
+<p>The SPARQL language has become the standard language for querying semantic graphs, but its limitations have been demonstrated. Our main research objective is to define a powerful and expressive query language for semantic graphs, while keeping this language simple enough that it can be easily integrated and understood. We propose an extension / improvement of the SPARQL query language with the operators of the properties in temporal logic, allowing to fill the gaps of SPARQL in the semantic graphs. To achieve this goal, we used the technology available in the ScaleSem approach for the verification of semantic graphs.</p>
+<p>The STL-Resolver tool was the subject of an APP filing, following its development by the team and myself during my thesis. It is a query engine for semantic graph models that uses temporal logic queries based on the browse algorithms of the NuSMV model checker. NuSMV was our choice for the implementation of the STL-Resolver over the SPIN model checker because of its multiple advantages:</p>
+<ul>
+<li>our models of semantic graphs in SMV language are not limited in number of states;</li>
+<li>verification is done directly, without going through an intermediate compiler;</li>
+<li>it implements the two types of temporal logics: linear temporal logic and tree-based temporal logic for verification;</li>
+</ul>
+<p><img src="/images/projects/scalesem/stl_resolver.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>The architecture in the figure above explains how the STL-Resolver tool works. First, the semantic graph model (or graph) is written in SMV language by the RDF2NuSMV tool. Secondly, the STL Resolver tool takes as input the semantic graph model and a temporal logic request. This tool will retrieve all the states of the model and transforms the query in temporal logic into a list of temporal logic formulas (i.e. without variable or wildcard in the query) by replacing each time the variable of the query in temporal logic by a state of our graph. Then, all the formulas will be tested, giving them as a parameter to the NuSMV model checker. If the formula is correct, then the state replacing the query variable is a solution, otherwise another state will be searched (if any remain) and the process described above will be repeated.</p>
+<p><img src="/images/projects/scalesem/alog_resolution_requetes.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>The resolution algorithm processes each triple of the query in temporal logic. If the variable in the triplet is the object, then the solution will be the successor of the Subject. But it will also depend on the number of appearances of the Next operator. If this one appears twice, then the solution will be the successor of the successor of the Subject. If the variable is the subject, then the solution will be the object&rsquo;s predecessors. Finally, the successor function returns the successor nodes to the node given as a parameter.</p>
+<p>We have also introduced a new SPARQL2RLT tool to transform SPARQL language queries into queries using linear temporal logic (LTL) or tree (CTL) operators. The final objective of these transformations is to solve the shortcomings of SPARQL queries on large graphs and more specifically on joins. This problem is currently the subject of intensive research to reduce the polling time of large graphs.</p>
+<p><img src="/images/projects/scalesem/algo_sparql2rlt.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>This algorithm transforms the queries in SPARQL language into queries using the operators of linear and tree-based temporal logic. The transformation depends on the SPARQL query. If it is a projection, join or union type query, we transform each triplet in the query into a triple using the temporal logic operators with the Triplet function defined in Script 23 below and we will separate them with the operator &amp;. On the other hand, if the SPARQL query is of type optional, as this form will add information to the result of the SPARQL query, the temporal logic query will precede all the triples contained in the OPTIONAL part of the query by the keyword Eventually. This keyword will add information if it exists in the semantic graph model.</p>
+<p><img src="/images/projects/scalesem/algo_triplet.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>The Triplet algorithm, described above, processes each triplet of the SPARQL query. The predicate of each triplet will be replaced by -&gt;, the subject will always remain the same and the object too unless it is a variable. In this case, it will be replaced by Next Next variable. In case we have a selection on the predicate, we will replace the predicate with -&gt; and the object with a Next variable. The last part of this algorithm is the optimization part. It is used to reduce the number of triples in the temporal logic query.</p>
+<p>The SPARQL2RLT tool (APP repository) transforms SPARQL queries into queries using temporal logic operators. For the development of this tool, we decided to useLEX &amp; YACC for splitting the SPARQL query into a tree in order to facilitate the transformation. LEX is used to recognize lexical entities and replace them with keywords that will be recognized in the grammar of the language defined in the grammar written in YACC (Yet Another Compiler Compiler) syntax. Subsequently, YACC will recognize and check whether or not the expressions respect this grammar. LEX &amp; YACC are two very powerful tools, facilitating lexical and syntactic analysis, respectively two difficult stages of compilation.</p>
+<p>The SPARQL language is characterized by its complexity and has several limitations. The goal of the research presented here in the field of semantic web data interrogation is to improve certain gaps identified previously. For this, we used the temporal logic queries to simplify the SPARQL queries and obtain greater expressiveness with the temporal logic operators. The advantage of temporal logic formulas is their ease of use and their power of expression of verification formulas on semantic graph models.</p>
+<p>Model checking algorithms are very efficient for traversing graphs, but they are faced with the problem of combinatorial explosion. Our approach to querying semantic graphs has not given very good results in terms of speed, but it allows to add expressiveness and simplicity to queries in SPARQL language.</p>
+<h2 id="the-clock-methodology">The CLOCK methodology</h2>
+<p>The semantic web is a dynamic, multi-actor and distributed environment. Designing ontology is slow and difficult work. However, like any model based on a conceptualization of the real world, ontology must adapt to change and evolve. There are many reasons for the change. For example: the definition domain can change, the ontology can be used for different tasks than those initially defined &hellip;</p>
+<p>The different works on the ontology evolution, crucial for the development of the semantic web, is recent. The evolution of an ontology goes through several stages, including the change stage which consists in modifying the ontology to take into account the evolutions of the domain it models. Adapting the ontology to change can reveal two types of problems: inconsistency and inconsistency. The inconsistency is detected when there is a possible interpretation of this ontology which is a model, but this underlying model associates with certain classes a set of instances which will always be empty. That is, no object can ever be an instance of this class. This type of class is called an insastifiable class. Inconsistency is detected when there is no possible interpretation of the ontology that is a model for this ontology. Driving the application of changes while maintaining consistency of ontology is a crucial and costly task in terms of time and complexity. An automated process is therefore essential.</p>
+<p>We are interested in the problems of managing changes in an ontology. To answer these problems, we propose a new methodology <strong>CLOCk</strong> (* Change Log Ontology Checker *) based on a formal method and model checking. This method is based on a modeling using inconsistency patterns for the detection and correction of the inconsistency caused during the process of ontology evolution.</p>
+<p><img src="/images/projects/scalesem/clock_identification.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 317px !important;" ></p>
+<p>La figure ci-dessus décrit le processus d’évolution, d’identification et de correction d’incohérence d’ontologie. La première étape (processus d’évolution) est la modification de l’ontologie de base Vn en ajoutant ou en supprimant des propriétés ou des concepts. L’étape suivante (processus d’identification) gère la cohérence de l’ontologie en utilisant le model checker NuSMV. Si une incohérence est détectée, le model checker retournera un contre-exemple affichant la séquence des modifications dans le graphe NuSMV provoquant l’incohérence. Sinon le model checker retournera « vrai » et le processus passera à la dernière étape : la validation. La troisième étape (processus de correction) est utile lorsque le model checker détecte une incohérence, cette étape corrige l’incohérence avant la mise en œuvre de la nouvelle version de l’ontologie et repassera par l’étape deux du processus pour s’assurer de l’inexistence de l’incohérence. Si après vérification, l’incohérence a disparu, on passe à l’étape de validation qui est la dernière étape de ce processus afin de valider la nouvelle version Vn+1 de l’ontologie. Sinon le processus boucle sur l’étape trois pour corriger l’incohérence jusqu&rsquo;à ce que l’incohérence disparaisse.</p>
+<p>The size and the complexity of ontologies make manual management of the effects of changes impossible. For the detection of inconsistencies, we need an automatic detection mechanism. In our approach to detecting inconsistencies during the evolution of ontology, we will use the procedural approach. This approach keeps track of changes between two ontology versions which allows verifying the modifications made during the evolution of the ontology. The modifications made constitute a series of simple and / or composite operations that the user wishes to apply to the diagram (see the &ldquo;evolution process&rdquo; and &ldquo;correction process&rdquo; parts of above figure). Simple operators represent operations such as additions or deletions of relations or concepts. Complex operators are a series of simple operations.
+Based on model checking techniques and temporal logic formulas, we will detect inconsistencies in the evolution of ontology caused by simple and / or complex operators by just checking the changes (in logs) made during the process. evolutions of the basic ontology. The CLOCk methodology is involved in the &ldquo;semantic of changes&rdquo; stage of the evolution process. Ontology must evolve from one consistent state to another consistent state, that is, the state where the constraints of the ontological model are respected. In order to resolve the inconsistencies introduced by the changes, other additional changes may be necessary, the task of this step then being to allow any additional changes to be resolved in a systematic manner.</p>
+<p><img src="/images/projects/scalesem/clock.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 460px !important;width: 617px !important;" ></p>
+<p>The verification strategy is automatic and is based on the use of change patterns for the inconsistency verification (Figure above). This methodology can be applied to the ontology for a posteriori or a priori verification by ensuring the logical and structural consistency of the ontology.</p>
+<p>One of the reasoners tasks like <a href="">Fact ++</a> or <a href="">Pellet</a> is to validate the consistency of the model associated with the ontology. Our methodology has been tested with different reasoners. [RacerPro] () and [Pellet] () do not identify the axioms involved in the inconsistency raised. They just give a hint to help the user debug the ontology. However, this explanation is too vague for the user to fully understand the reason for the inconsistency. <a href="">Hermit</a> and <a href="">Fact ++</a> identify inconsistency as a problem at the level of &ldquo;Bad Individuals&rdquo;, which means that the contradiction is in the instances of ontology. They give a list of axioms related to inconsistency. However, since there is no evolution log to retrieve the chronology of the axioms, the axioms cannot be listed in chronological order. It is therefore not possible to identify which of them caused the contradiction. The CLOCk methodology identifies the inconsistency caused during the evolution of ontology thanks to the model checker and thanks to the evolution log tracing the chronology of axioms.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The main function of the W3C is to standardize the representation and exchange of information on the Web. This objective should help to make the information understandable for automated processes and users. New standards have been developed to allow the semantic representation of information in the form of languages ​​derived from XML. This database is called the semantic web. The latter is generally represented as a stack of languages ​​ranging from languages ​​oriented towards automatic processes to languages ​​representing more abstract concepts of formal semantics.</p>
+<p>Several languages ​​have been developed within the framework of the semantic web and most of these languages ​​are based on the XML language. OWL language and RDF language are very important languages ​​of the semantic web. The OWL language is used to represent ontologies, and it offers machines a great capacity for executing web content. RDF is the first standard of
+W3C for enriching web resources with detailed descriptions. These languages ​​are used to represent the semantics associated with information, whatever its form and structure in the form of graphs. To enable the construction of semantic graphs, many tools have been developed such as Annotea, which is a W3C project that specifies the infrastructure for annotating web documents. The main format used in annotation is RDF and the types of documents that can be annotated are HTML or XML based documents. However, none offer the possibility of checking the consistency of semantics and reducing annotation errors.</p>
+<p>The semantic web, modeled on the real world, is a dynamic environment in constant evolution. This evolution requires to reflect the changes on the ontologies of the semantic web. By its very nature, an ontology is constantly evolving. Any change can lead to contradictions within the ontology. It is therefore essential to verify the ontology.
+These contradictions appear for several reasons such as modeling errors during the construction of an ontology or during its migration or during the fusion of ontologies. The evolution of an ontology is, in the opinion of the community, a process made up of several stages. One of them, the change stage, is to modify the ontology to make it more precise and more appropriate to the domain it is modeling. This process of enrichment, just like the process of populating ontology, is a source and a revealer of inconsistencies. Driving the application of changes while maintaining consistency of ontology is a crucial and costly task in terms of time and complexity. An automated process is therefore essential.</p>
+<p>The objective of this doctoral thesis is to consider semantic graphs as state graphs on which model checking techniques can be applied. Our ambition was to develop a new approach and tools, first of all, to browse semantic graphs more quickly, then, to propose a query system that is simpler in its writing, but offering a greater functional coverage than the languages ​​of existing queries, finally, to check the consistency of ontologies during their evolution.</p>
+<p>To meet these expectations, we have developed a set based on the use of a formal method: model checking. Model checking is a very powerful and precise technique for detecting errors in complex systems. It can reveal errors that have not been discovered by other formal methods such as testing and simulation. It can also handle complex problems with large amounts of information, stored as
+of graph.</p>
+<p>In this work, we first developed tools to transform semantic graphs into models in order to be verified by the model checker. The RDF2SPIN and RDF2NuSMV tools transform the semantic graphs in PROMELA language and in NuSMV language respectively. We use the SPIN model checker and the NuSMV model checker to check the models of the semantic graphs. SPIN is a software tool for checking system models. The system is described in a language model called PROMELA. NuSMV is the improvement of the SMV model checker, it works on the same principles as SMV. SPIN checks the correctness of properties expressed in linear temporal logic, while NuSMV checks properties in both linear and tree temporal logic. A study on the behavior of these tools has shown that the RDF2SPIN tool has several limitations compared to RDF2NuSMV. The SPIN model checker only uses linear temporal logic, and the semantic graph models that can be processed should not exceed a size limit of 255 nodes (states). Following this study, the rest of our work was based on the NuSMV model checker. The RDF graphs processed in our work are presented in the form of XML files. Their format is not always compatible with the organization expected by the NuSMV model checker (no root). We have developed a conversion algorithm that consists of three steps: a step for exploring the RDF graph, a step for determining a root vertex and a step for generating the model representing the RDF graph.</p>
+<p>Once we obtained a semantic graph processing system by the NuSMV model checker, we worked on the design of a query language specific to our system. Our research objective in this part was to define a simple, powerful and expressive query language for semantic graphs. We used the SPARQL query language as a basis. We have extended this language with the operators of properties in temporal logic allowing to overcome certain limitations of SPARQL in semantic graphs (the expression of paths between two states). On this point our approach is satisfactory. On the other hand, on many points our performance remains dependent on the structure of the graphs and the types of queries. For now, our performance is not satisfactory compared to that of SPARQL.</p>
+<p>The last point of our work concerns the study of the problems of managing changes in an ontology. On this point, we have proposed a new methodology called CLOCk (Change Log Ontology Checker) based on model checking. It is based on a modeling using inconsistency patterns for the detection and correction of the inconsistency caused during the process of ontology evolution. To be more precise, our approach allows the prediction and identification of incompatible change succession patterns in the journal or the log of changes. Several studies have shown the importance of the evolution of ontology. Nevertheless, almost all of these approaches do manage change. This identification process is articulated in three phases. The first phase consists of transforming the log of changes (a file for traceability of changes), specified in OWL-DL language, into a NuSMV graph. The NuSMV graph is composed of nodes representing the axioms drawn in the log and the arcs defining the relations of succession between them. The changes are represented chronologically in the NuSMV model. The second phase generates patterns of inconsistency. First, these patterns are taken from the inconsistency patterns corresponding to the constructors used in the axioms and are specified in temporal logic. Then, an algorithm instantiates them with the elements of the NuSMV graph (concepts, properties, etc.) in order to generate all the patterns of inconsistency that may appear in the chronology of axioms. These inconsistency patterns define instantiation rules specified by the &ldquo;hasInstanciationRule&rdquo; attribute for each parameter. It is these rules that will guide the instantiation of patterns with the elements of the axiom timeline. The third and last phase uses the NuSMV model checker to check if one of the patterns defined previously in temporal logic can be located in the NuSMV graph. For this, the patterns generated in temporal logic are supplied to it as input, as well as the NuSMV graph. The model checker traverses the graph chronologically from node to node in order to find a succession of nodes corresponding to one of the inconsistent patterns. Nodes don&rsquo;t have to be directly successive neighbors to match a pattern, they just need to appear chronologically in the same order.</p>
+<p>Our checking strategy is automatic and consists of using change patterns to check for inconsistencies. The CLOCk methodology can be applied on the ontology for a posteriori or a priori verification by ensuring the logical and structural coherence of the ontology.</p>
+<p>The use of a model checker for the management of semantic graphs is an innovative approach that has, to our knowledge, never been addressed by other researchers. During these three years, we have identified several limitations to this approach.</p>
+<p>In practice, the major limitation of model checking is the gigantic size of transition systems due to the phenomenon of the combinatorial explosion of the number of states of the system. This phenomenon is due on the one hand to the size of the transition system which increases exponentially with the number of variables, and on the other hand to the number of components of the system in the case where the system is concurrent. To limit each of these potential sources of combinatorial explosion we used the symbolic NuSMV model checker. The principle of symbolic model checking is to use a symbolic representation of the automaton to be verified. That is, states are handled in packets instead of being considered one by one. For this, the algorithm uses Boolean functions in the form of BDD21 as an internal representation. Symbolic model checking limits the number of variables and the partial orders for component interleaving. This will increase the computational resources allowing the industrial use of model checking for certain types of application. Despite this use of NuSMV, the size of semantic graphs is often a limit. To meet this limit and save space in memory, we want on the one hand to reduce the name of the variables defined in the NuSMV model and on the other hand to develop a tool for the fragmentation of the semantic graph before its transformation to process the data in parallel. semantic graphs.</p>
+<p>In our work, we have sought to extend the SPARQL language. SPARQL is a query language for the Semantic Web that has been standardized by the W3C. Evaluating SPARQL queries is known to be an NP-hard complexity problem (Pérez et al., 2009). We used model checking algorithms to query the semantic graphs to increase the expressiveness of the SPARQL query language. For this, we have proposed a new semantic graph query language based on the ScaleSem approach. This language uses the operators of temporal logic to allow us to move around the semantic graph. We have shown that temporal logic queries are simpler and have greater expressiveness compared to the SPARQL query language. However, the execution time of these queries remains higher than those equivalent in SPARQL. Defining a temporal logic query syntax for the semantic web with acceptable response times is a challenge for the next few years. We will be able to improve our STL Resolver tool to meet these objectives.</p>
+<p>The CLOCk methodology proposed in this work works on small graphs. Increasing the size of the ontology automatically causes an increase in the number of instantiations of inconsistency patterns. These patterns correspond to constructors used in axioms and are specified in temporal logic. We have described a strategy for detecting inconsistencies during its evolution. Our strategy improves the efficiency of the ontology evolution process by proposing a set of predefined actions to be performed by the ontology designer. This methodology is an implementation of our ScaleSem approach in the field of ontology evolution. Our future goal is to make this methodology a more precise and faster ontology debugger than the ontology reasoners known as Pellet, Fact ++.</p>
+<h2 id="publications">Publications</h2>
+<h4 id="book">Book</h4>
+<ul>
+<li>Gueffaz, M., Rampacek, S. et Nicolle, C. <em>ScaleSem: a new approach to check and to query semantic graphs</em>. IGI Global, Encyclopedia Editorial Team, 2012</li>
+</ul>
+<h4 id="journal">Journal</h4>
+<ul>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Temporal Logic to Query Semantic Graphs Based on the NuSMV model checker</em>, Journal of Software (JSW), Selected Best papers on IIT, 2012</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Mapping SPARQL Query to Temporal Logic Query Based on NμSMV model checker to Query Semantic Graphs</em>, International Journal of Digital Information and Wireless Communications (IJDIWC) 1, 2 (2012) 366-380, 2012</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Verifying Semantic Graphs With the model checker SPIN</em>, International Journal of Digital Information and Wireless Communications (IJDIWC) 1, 1 (2011) 64-74, 2011</p>
+</li>
+</ul>
+<h4 id="international-conferences">International conferences</h4>
+<ul>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Inconsistency Identification In Dynamic Ontologies Based On Model checking</em>, Webist 2012- Proceedings  of the the 8th International Conference on Web Information Systems and Technologies , Porto, Portugal, INSTICC, ACM SIGMIS, May 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>RDF2NµSMV: Mapping Semantic Graphs to NµSMV model checker</em>, Proceedings of the Third International Conference on Advances in Future Internet (AFIN 2011), Nice/Saint Laurent du Var, France, Août 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>A New Approach Based on NµSMV Model to Query Semantic Graph</em>, Proceedings of the International Conference on Digital Information Processing and Communications (ICDIPC 2011), Ostrava, République Tchèque, Springer-Verlag, Juillet 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>RDF2SPIN: Mapping Semantic Graphs To Spin model checker</em>, Proceedings of the International Conference on Digital Information and Communication Technology (DICTAP), Dijon, France, Springer-Verlag, 21 Juin 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Scalesem: Evaluation Of Semantic Graph Based On Model checking</em>, Webist 2011- Proceedings of the 7th International Conference on Web Information Systems and Technologies, Noordwijkerhout, Hollande, INSTICC, ACM SIGMIS, May 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Qualifying Semantic Graphs Using Model checking</em>, Proceedings of the of the 7th International Conference on Innovations in Information Technology (Innovations'11), Abu Dhabi, Emirats arabes Unis, Sponsored by IEEE, April 2011</p>
+</li>
+</ul>
+<h4 id="workshop">Workshop</h4>
+<ul>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>La logique temporelle pour interroger et qualifier des graphes sémantiques</em>, Réseau Grand Est (RGE), Strasbourg, France, 13 octobre 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Qualification et interrogation de graphes sémantiques à l&rsquo;aide du Model checking, Assemblé général du laboratoire LE2I, Creusot (Centre universitaire du Condorcet), France, 1 juillet 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., Rampacek, S. et Nicolle, C., <em>Qualification de graphes sémantiques à l&rsquo;aide du Model checking</em>, 17eme Forum des jeunes
+chercheurs (FJC 2011), Dijon, France, 16 et 17 Juin 2011</p>
+</li>
+<li>
+<p>Gueffaz, M., <em>L&rsquo;interrogation des graphes sémantiques à l&rsquo;aide de la logique temporelle</em>, Séminaire Université de Franche-Comté., Besançon, France, Juillet 2010</p>
+</li>
+</ul>
+<h4 id="registration-in-agency-for-the-protection-of-program">Registration in Agency for the Protection of Program</h4>
+<ul>
+<li>
+<p>SPARQL2RLT: IDDN FR.001.240031.000.S.P.2012.000.10800. Outil de transformation de requêtes SPARQL en requête utilisant la logique temporelle.</p>
+</li>
+<li>
+<p>STL-Resolver: IDDN FR.001.240032.000.SP.2012.000.10800. Outil de résolution des requêtes en logique temporelle.</p>
+</li>
+<li>
+<p>RDF2SPIN : IDDN FR.001.240034.000.SP.2012.000.10800. Outil de transformation de graphes RDF en modèles de graphe SPIN.</p>
+</li>
+<li>
+<p>RDF2NuSMV: IDDN FR.001.240040.000.S.P.2012.000.10800. Outil de transformation de graphes RDF en modèles de graphe NuSMV.</p>
+</li>
+</ul>
+<h2 id="links">Links</h2>
+<p>For more information, please visit the thesis report website at the following link <a href="https://hal.archives-ouvertes.fr/tel-00801730">here</a> and on the various publications <a href="https://dblp.org/pid/38/9810.html">here</a></p>
+<h2 id="thanks">Thanks</h2>
+<ul>
+<li>
+<p>Perrine Pittet pour sa collaboration au projet CLOCK.</p>
+</li>
+<li>
+<p>Christophe Nicolle de m&rsquo;avoir accuillie dans son équipe de recherche à l&rsquo;Université de Bourgogne.</p>
+</li>
+</ul>
 
       </div>
 
