@@ -7,15 +7,15 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Mahdi GUEFFAZ">
-    <meta name="description" content="This Github Action automates builds and deploys of Github-hosted Hugo websites to Github pages repositories. Works with submodules.">
+    <meta name="description" content="The general idea of the ScaleSem approach is to check properties and to query the semantic graphs. To this end, we propose tools for processing and querying semantic graph-based Model checking in this thesis.">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ScaleSem"/>
-<meta name="twitter:description" content="This Github Action automates builds and deploys of Github-hosted Hugo websites to Github pages repositories. Works with submodules."/>
+<meta name="twitter:description" content="The general idea of the ScaleSem approach is to check properties and to query the semantic graphs. To this end, we propose tools for processing and querying semantic graph-based Model checking in this thesis."/>
 
     <meta property="og:title" content="ScaleSem" />
-<meta property="og:description" content="This Github Action automates builds and deploys of Github-hosted Hugo websites to Github pages repositories. Works with submodules." />
+<meta property="og:description" content="The general idea of the ScaleSem approach is to check properties and to query the semantic graphs. To this end, we propose tools for processing and querying semantic graph-based Model checking in this thesis." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://mikedido.github.io/projects/scalesem/" />
 <meta property="article:published_time" content="2013-11-15T00:00:00+00:00" />
@@ -208,7 +208,6 @@
 (Resource Description Framework) are the most important languages of the Semantic Web, and are based on XML.</p>
 <p>RDF is the first W3C standard for enriching resources on the Web with detailed descriptions, and increases the facility of automatic processing of Web resources. Descriptions may be characteristics of resources, such as the author or the content of a website. These descriptions are metadata. Enriching the Web with metadata allows the development of the so-called Semantic Web. RDF is used to represent semantic graphs corresponding to a specific knowledge modeling. RDF files are typically stored in a relational database and manipulated using SQL, or derived languages such as SPARQL. This solution is well suited for small RDF graphs, but is unfortunately not well suited for large RDF graphs. These graphs are rapidly evolving, and adapting them to change may reveal inconsistencies. Driving the implementation of changes while maintaining the consistency of a semantic graph is a crucial task, and costly in terms of time and complexity. An automated process is essential. For these large RDF graphs, we propose a new way using formal verification entitled &ldquo;Model checking.&rdquo;</p>
 <p>Model checking is a verification technique that explores all possible states of the system. In this way, we can show that a model of a given system satisfies a given property. This thesis provides a new method for checking and querying semantic graphs. We propose an approach called ScaleSem which transforms semantic graphs into graphs understood by the model checker (The verification Tool of the model checking method). It is necessary to have software tools to perform the translation of a graph described in a certain formalism into the same graph (or adaptation) described in another formalism.</p>
-<p>The general idea of the ScaleSem approach is to check properties and to query the semantic graphs. To this end, we propose tools for processing and querying semantic graph-based Model checking in this thesis.</p>
 <h2 id="semantic-graphs-qualification">Semantic graphs qualification</h2>
 <p>After presenting several model checkers, we chose the SPIN and NuSMV model checkers which use non-timed automata, that is to say that the notion of time is not taken into account in the edges of our models. This untimed model is appropriate in our approach, since a semantic graph does not take into account the time (or does not need a time variable) to move from one state of the graph to another. The SPIN and NuSMV model checkers are the most widely used in the field of qualitative verification.</p>
 <p>Our approach which consists in transforming semantic graphs into models in order to be verified by the model checker. This transformation and verification approach is called “ScaleSem”. For this, we have developed two tools called <em>RDF2SPIN</em> and <em>RDF2NuSMV</em> (these two tools have been deposited with the Agency for the Protection of Programs <a href="https://www.app.asso.fr/nos-solutions/deposer">APP</a>), which transform the semantic graphs respectively into the PROMELA language and into the SMV language.</p>
