@@ -179,15 +179,122 @@
 <h1 id="table-of-contents">Table of contents</h1>
 <ol>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#paragraph1">Some paragraph</a>
-<ol>
-<li><a href="#subparagraph1">Sub paragraph</a></li>
-</ol>
+<li><a href="#architecture">Architecture</a>
+<ul>
+<li><a href="#le-corpus">2.1. The corpus</a></li>
+<li><a href="#phase-1">2.2. Population step</a>
+<ul>
+<li><a href="#phase-1-1">2.2.1 Annotation</a></li>
+<li><a href="#phase-1-2">2.2.2 Population</a></li>
+</ul>
 </li>
-<li><a href="#paragraph2">Another paragraph</a></li>
+<li><a href="#phase-2">2.3 Enrichment step</a>
+<ul>
+<li><a href="#phase-2-1">2.3.1 With general data</a></li>
+<li><a href="#phase-2-2">2.3.2 With specific data</a></li>
+</ul>
+</li>
+<li><a href="#phase-3">2.4 Exploitation step</a></li>
+</ul>
+</li>
+<li><a href="#partenaires">Partenaires</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#links">Links</a></li>
 </ol>
-<h2 id="about">About</h2>
-<p>The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The ILOT (<em>Innovative Learning Object for Teaching</em>) project is a collaborative project that combines <a href="">Gutenberg technologies</a>, <a href="">LeLivreScolaire</a>, <a href="">Alcatel Lucent</a> et <a href="">Telecom ParisTech</a> to provide a resource repository pedagogical allowing the collaborative development of such resources, their annotation and their use in different modes of consultation.</p>
+<p>The Telecom ParisTech Multimedia team contributes to the ILOT project mainly on the representation of multimedia documents intended to be used in various contexts of use, by various users on various terminals. The work also focuses on metadata representing semantic information concerning these documents and on the exploitation of this semantics.</p>
+<p>On this site, we will find descriptions of demonstrators and results of our work, proposals for tools and methods, considerations on the state of the art concerning the issues addressed by our work.</p>
+<p>The ILOT project aims to develop a software platform for the collaborative creation, assembly, provision and shared use of educational content adaptable to the student as well as to the medium used (Web, Smartphones, touch pads, interactive digital boards, paper books, Smartphones, digital binders, etc.). Courses and training courses will then be composed of reusable and annotable learning objects - ILOTs - and will be associated with social networks focused on content.
+In other words, the ILOT consortium has set itself the objective of using digital technologies for the benefit of the educational world, from teachers and editors of educational content to learners. In fact, the platform developed.</p>
+<ul>
+<li>
+<p>Provide teachers with tools to enable them to create their courses by reusing, if they wish, educational objects gathered in a marketplace.</p>
+</li>
+<li>
+<p>Adapt its educational content to the students using it and to the media used.</p>
+</li>
+<li>
+<p>Strengthen exchanges between teachers and students, by providing them with social networks based on educational content and opportunities for annotations and conversations around them.</p>
+</li>
+<li>
+<p>Provide all textbook publishers with tools and access to suitable content to edit their own books.</p>
+</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<ul>
+<li>
+<p><strong>Extraction</strong> : provides the information from the corpus to constitute the ontology; in our process, a semi-automatic extraction of the texts from the PDF files allowed a first structuring in XML;</p>
+</li>
+<li>
+<p><strong>Analysis</strong> : starting from the results of the first step, this step uses morphological or lexical analysis, semantic analysis to detect synonyms, homonyms and other such relations; such techniques allow us to annotate the XML file to distinguish parts of it;</p>
+</li>
+<li>
+<p><strong>Generation</strong> : this step concerns the formalization of a model, for example with OWL. This is the most important step in the process. In our project, we build several ontologies for the different school programs grouped by subject. Starting from a basic ontology, we populate it by extracting information from the XML file. The basic ontology is designed manually for all the different school programs. The conception of the basic ontology has been developed by a detailed study of the different curricula of each subject at any level.</p>
+</li>
+<li>
+<p><strong>Validation</strong> : all the previous steps can introduce erroneous concepts and relationships, for this an automatic and / or human validation phase is necessary. We have performed a human validation, in particular with the reasoners of the Protégé tool;</p>
+</li>
+<li>
+<p><strong>Evolution</strong> : an ontology should not be a static representation of a domain, but should evolve with it; this phase has not yet been addressed in our system</p>
+</li>
+</ul>
+<h4 id="the-corpus--a-idle-corpusa">The corpus : <a id="le-corpus"></a></h4>
+<p>The use of the school program in our approach intended to index educational resources was based on experiences carried out with users and research results from European projects in the field of education, which confirmed our idea to use ontologies.</p>
+<p>Our body of experimentation consists of school curricula for all subjects at college and high school level, made available by the Ministry of National Education on the eduscol2 portal. The corpus contains PDF documents and HTML documents that we have manually transformed into XML files. These programs were designed as the framework of pedagogy for teachers. These programs, which are consulted by all teachers, thus become a common language specific to the community. The corpus contains several subjects to be taught: History-geography-civic education, Plastic arts, Music education, Physical and sports education, Languages ​​and cultures of Antiquity, Modern languages, French, History of the Arts, Mathematics, Physics-chemistry, Sciences of life and Earth, Technology. Quantitatively, the corpus is made up of 62 documents in pdf and html format. Overall, the documents consist of two main parts. The introductory part containing the objectives and the implementation of the programs and the part of the teaching contents. This last part contains the educational entities (theme, approach, capacity, description, etc.) which will be extracted for the construction of the ontologies of school programs. Some programs like History, Mathematics, Life and Earth Sciences, Technology have a semi-structured representation in the form of tables containing this information. This formatting helps us to determine the relationships and / or to define the hierarchy of the educational entities between them.</p>
+<h4 id="population-step--a-idphase-1a">Population step : <a id="phase-1"></a></h4>
+<p>We have chosen a representation in the ontology language OWL. Several reasons guided this choice. Firstly, a pragmatic reason for consistency in terms of the technical and conceptual tools used by our team. Secondly, because OWL has allowed us to clearly append the description of many synonyms to Bloom&rsquo;s verbs (we will see that this allows us to improve recall in our automated processing). Finally, this approach, well integrated with semantic web technologies, seems to us to facilitate future evolutions of our tools, for example for the taking into account of educational strategies (for example, by associating an educational objective with known methods to achieve it. and which would be described in this ontology or in others).</p>
+<p>Our Bloom ontology is made up of 83 classes distributed in a hierarchy from 6 main classes (analyze, apply, create, evaluate, memorize, understand). These classes have been associated with the labels of the corresponding verbs, in French and in English. In addition, a reference to the corresponding English words in <strong>WordNet</strong> constitutes an annotation which can help in the exploitation of these verbs. The architecture of our ontology population tool is made up of two main parts.</p>
+<ol>
+<li><strong>Annotation</strong> : <a id="phase-1-1"></a> a step of lemmatization is applied for the recognition of words automatically under different variations. Another word selection step was performed using the TF.IDF measurement. It makes it possible to offer &ldquo;topics&rdquo; that convey the most knowledge in a particular field, by highlighting words that are particularly important for a program. Finally, we use our Bloom ’ontology, which is used to classify educational actions in the form of verbs in the infinitive form; we created it based on Bloom&rsquo;s work. These steps allow us to semantically annotate our source documents.</li>
+</ol>
+<p><img src="/images/projects/ilot/annotation_step.png" alt="" style="display: block; margin-left: auto; margin-right: auto;height: 360px !important;width: 417px !important;" ></p>
+<ol start="2">
+<li><strong>Population</strong> : <a id="phase-1-2"></a> a second step allowing the basic ontology to be populated automatically by relying on the annotations made on the corpus. With each subject, we associate a basic ontology, created manually using the Protégé ontology editor after an analysis of the general concepts used by the program (themes, abilities, etc.). Our different basic ontologies are very similar and we plan to unify them.</li>
+</ol>
+<p><img src="/images/projects/ilot/peuplement_step.png" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 260px !important;width: 517px !important;" ></p>
+<h4 id="enrichment-step-a-idphase-2a">Enrichment step: <a id="phase-2"></a></h4>
+<p>For this phase of enriching the basic ontologies of the school program, we use open data collections. We can distinguish two types of such collections: general data and specific data.</p>
+<ol>
+<li>
+<p><strong>Enrichment Using Wikipedia <em>Categories</em></strong> : <a id="phase-2-1"></a> The first collection concerns the different types of data extracted from DBpedia, particularly Wikipedia Category, intended to classify Wikipedia articles. This type of data uses vocabularies [24]. Since its creation, the graph of ‘Wikipedia categories’ has been used as a research object in its own right. We can cite recent works such as the constitution of a semantic resource from the Wikipedia category lattice [25] and the use of categories for the design of an inter-domain recommendation system [26]. In our case study, we use the hierarchical classification of Wikipedia category ’to enrich the core curriculum ontologies. For example, in the ontology of the History of the arts, one of the primary classes is the class “Artistic domain” containing information concerning the six artistic domains: Arts of space, Arts of language, Arts of everyday life, Arts of sound and performing arts. The official program offers lists of concrete examples for each area. Examples of Space Arts are architecture, town planning, garden arts, landscaped landscapes. In the basic History of Arts ontology, the latter become concepts that are part of the subclasses of the &ldquo;Space Arts&rdquo; class.</p>
+</li>
+<li>
+<p><strong>Enrichment with specific data</strong> : <a id="phase-2-2"></a> The second type of data that we can use for the enrichment phase concerns open data made available by public institutions. We have identified three datasets having to do with our ontologies of school programs on the data.gouv.fr platform. We analyze the possibilities of connection between these data and the concepts of our ontologies. It is about &ldquo;History of the arts-Notices texts&rdquo; of the Ministry of Culture and Communication, a list of 156 educational files produced by the National Center of Art and Culture Georges Pompidou and finally the collection of data on the <a href="http://data.bnf.fr">data.bnf.fr</a> platform. These data can be used to enrich the ontologies of the school program such as History of the Arts, History and French.</p>
+</li>
+</ol>
+<h3 id="exploitation-step--a-idphase-3a">Exploitation step : <a id="phase-3"></a></h3>
+<p>This is the last phase of our method which will serve as the interface between the teacher and the school curricula. Our formalization currently consists of several ontologies of each subject. We intend to quickly create an ontology that integrates the whole, which will facilitate the establishment of links between programs. We have already created interfaces that exploit our ontologies to present the programs by highlighting the capacities to be acquired and the links with resources taken from DBPedia. The perspective is to make other external resources exploitable to enrich both the work of the teacher in the preparation phase of the course and the course of the courses by the students.</p>
+<h2 id="partenaires">Partenaires</h2>
+<p>The ILOT concept is the common thread of the project: ILOT, an <strong>atom of pedagogy</strong>, is a basic element (course element, adaptive exercise or not, illustration and associated legend, video or audio recording of a course, etc.), likely to be associated with others to form more or less complex assemblies (course sessions, tutorials, training courses, textbooks, workbooks, etc.). The ILOT is self-adapting, annotating and has an educational objective.</p>
+<p>The activity of the IT department of Telecom ParisTech in the ILOT project relates more specifically to aspects related to multimedia and Web technologies, in particular in terms of adapting multimedia documents to their context and using semantic web technologies. for the representation and use of educational resources.</p>
+<p>In short, the activity of the other partners covers:</p>
+<ul>
+<li>
+<p>for Gutemberg Technology, on the overall design and construction of the ILOT platform,</p>
+</li>
+<li>
+<p>for Alcatel Lucent, on a set of aspects related to the use of information produced by the community of users of the ILOT platform: annotations, tweets, comments, etc.</p>
+</li>
+<li>
+<p>for LeLivreScolaire, on the provision of educational content for secondary education in France and expertise in the collaborative production of educational content.</p>
+</li>
+</ul>
+<p><img src="/images/projects/ilot/logo_trois_partenaires.png" alt="" style="display: block; margin-left: auto; margin-right: auto; height: 100px !important;width: 617px !important;" ></p>
+<h2 id="publications">Publications</h2>
+<ul>
+<li>
+<p>Mahdi Gueffaz, Jirasri Deslis and Jean-Claude Moissinac, Curriculum data enrichment with ontologies. WIMS 2014, 4th International Conference on Web Intelligence, Mining and Semantics, June 2-4, 2014, Thessaloniki, Greece. <a href="https://dl.acm.org/doi/10.1145/2611040.2611070">ici</a></p>
+</li>
+<li>
+<p>Jean-Claude Moissinac, Mahdi Gueffaz, Jirasri Deslis, Création d’une ontologie de domaine: les programmes scolaires français. Conférence TOTh 2014 (Terminologie &amp; Ontologie : Théories et applications), 12-13 juin 2014, Chambéry, France. <a href="https://fr.slideshare.net/IlotProject/toth-ontologies-des-programmes-scolaires-franais-v2revujdfinal">ici</a></p>
+</li>
+<li>
+<p>Mahdi Gueffaz, Jirasri Deslis, Jean-Claude Moissinac, Peuplement automatisé d’ontologies par analyse des programmes scolaires. RISE 2014, 6ème Atelier Recherche d’Information SEmantique, 18 mars 2014, Nancy, France. <a href="http://biblio.telecom-paristech.fr/cgi-bin/download.cgi?id=14500">ici</a></p>
+</li>
+</ul>
+<h2 id="links">Links</h2>
+<p>Pour plus d&rsquo;information, veuillez visiter le site du projet ILOT sur le lien suivant <a href="https://ilot.wp.imt.fr/">ici</a></p>
 
       </div>
 

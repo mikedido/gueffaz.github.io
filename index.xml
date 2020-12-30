@@ -71,7 +71,7 @@ $$ \sum_{n=1}^{\infty} 2^{-n} = 1 $$
       <pubDate>Sat, 15 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>http://mikedido.github.io/projects/ilot/</guid>
-      <description>Table of contents  Introduction Some paragraph  Sub paragraph   Another paragraph  About The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreSco- laire, Alcatel Lucent and Telecom ParisTech to offer a repository of educational resources allowing the collaborative development of such resources, their annotation and their use in different consultation modes.</description>
+      <description>Table of contents  Introduction Architecture  2.1. The corpus 2.2. Population step  2.2.1 Annotation 2.2.2 Population   2.3 Enrichment step  2.3.1 With general data 2.3.2 With specific data   2.4 Exploitation step   Partenaires Publications Links  Introduction The ILOT (Innovative Learning Object for Teaching) project is a collaborative project that combines Gutenberg technologies, LeLivreScolaire, Alcatel Lucent et Telecom ParisTech to provide a resource repository pedagogical allowing the collaborative development of such resources, their annotation and their use in different modes of consultation.</description>
     </item>
     
     <item>
